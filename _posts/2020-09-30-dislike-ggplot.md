@@ -47,7 +47,8 @@ complaints about ggplot defaults:
 
 1. The function ought to choose an appropriate binwidth, instead of saying that
    it has chosen a poor default.
-2. While the ggplot graph looks pretty enough for a magazine, this default
+2. While the ggplot graph looks pretty enough for a magazine, the default
    low-contrast style can be a problem for some viewers and some
-   printing/reproduction methods.
+   printing/reproduction methods. (Yes, I know I can change to a more sensible
+   style, but awkward defaults are annoying.)
 
