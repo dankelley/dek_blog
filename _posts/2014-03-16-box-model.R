@@ -5,7 +5,7 @@ parms <- list(A = 4e6, gamma = 20)
 sperday <- 86400 # seconds per day
 times <- seq(0, 20 * sperday, length.out = 500)
 R <- function(t) {
-    1 + ifelse(10.0 * sperday < t & t < 10.5 * sperday, 9, 0)
+    1 + ifelse(10 * sperday < t & t < 12 * sperday, 9, 0)
 }
 DE <- function(t, y, parms) {
     h <- y[1]
