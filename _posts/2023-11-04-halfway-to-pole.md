@@ -23,8 +23,7 @@ uniroot(\(lat) geodDist(0, 0, 0, lat) - L/2, c(0, 90))$root
 This code indicates that the halfway point is at 45.11432N, which is about 16
 km from 45N.
 
-The Mastadon Ridge website,
-https://mastodonridge.ca/experience/halfway-to-the-equator/, shows a letter
+The [Mastadon Ridge website](https://mastodonridge.ca/experience/halfway-to-the-equator/) shows a letter
 (dated 1952, when some could be called a 'field man') that indicates that the
 halfway point is 45 degrees 8 minutes, 50 seconds.  Converted to decimal, that
 is 45.14444, which is very close to the value from the R code given above.
