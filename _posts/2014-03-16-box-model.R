@@ -18,5 +18,5 @@ h <- sol[, 2]
 Day <- times / 86400
 plot(Day, R(times), type = "l", ylab = "River input [m^3/s]")
 plot(Day, h, type = "l", ylab = "Lake level [m]")
-lines(h = 1 / parms$gamma) # theoretical steady state for 1 m^3/s
+abline(h = 1 / parms$gamma, lty = 2) # theoretical steady state for 1 m^3/s
 dev.off()
