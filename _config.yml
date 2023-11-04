@@ -1,7 +1,7 @@
-author:
-  name: Dan Kelley
-  email: kelley.dan@gmail.com
-  github_username: dankelley
+email: kelley.dan@gmail.com
+github_username: dankelley
 description: >
   A trial blog.
-theme: minima
+remote_theme: pages-themes/leap-day@v0.2.0
+plugins:
+  - jekyll-remote-theme
