@@ -3,8 +3,17 @@ title: Faded colourscheme in R
 date: 2023-11-04
 ---
 
-Sometimes I want to put contours on top of an image, because then I have the best of two worlds: colours to give me a feel for the highs and lows of a field, and contours to give me quantitative values.  But there's a problem with this: many colour schemes have some colours that are dark enough to make it difficult to see the contours (and especially the labels) that are placed on top.  So I wrote some R code. Here, it is illustrated with the `volcano` dataset.
+Sometimes I want to put contours on top of an image, because then I have the
+best of two worlds: colours to give me a feel for the highs and lows of a
+field, and contours to give me quantitative values.
 
+However, it can be difficult to see contour lines and labels against dark
+colours. One solution is to use a faded palette (think of mixing white paint
+into coloured paint), and the function illustrated in the code below does just
+that.  In the example, I am using the `oceColorsTurbo` palette, not because I
+think that is appropriate for the example plot, but rather because it is a
+scheme I often use for other things, and it suffers the problem of hiding
+contours.
 
 ```R
 # faded_palette.R
