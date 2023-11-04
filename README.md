@@ -20,6 +20,7 @@ But, wait, there's more!  Must next:
 
 * 2022-02-16-vim-julia.Rmd
 * 2014-03-16-box-model.Rmd but css is not working yet
+* 2020-09-30-dislike-ggplot.md
 
 # Items not yet transferred from the old blog
 
@@ -29,7 +30,6 @@ But, wait, there's more!  Must next:
 * 2020-03-03-oce-update-magneticField.Rmd
 * 2020-08-02-map-projection.Rmd
 * 2020-08-02-oce-proj.Rmd
-* 2020-09-30-dislike-ggplot.Rmd
 * 2019-12-15-new-R-palette.Rmd
 * 2018-10-06-oce-1.0-published.Rmd
 * 2017-12-21-spectrum-length.Rmd
