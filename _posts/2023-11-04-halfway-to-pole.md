@@ -30,10 +30,11 @@ is 45.14444, which is very close to the value from the R code given above.
 (The difference, 45.14444 - 45.14432, is just 14 metres!)
 
 I have not gone to this place to check the actual location of the marker, but
-google maps tells me it is about 200 metres further north on the highway, just
-about at the bridge over the Stewiacke River.  That's about a 2 minute stroll
-away from the Mastodon Ridge buildings.  If a reader happens to take a photo
-of the position marker (which I hope is still there), I'd be happy to post it
-on this blog!
+[google
+maps](https://www.google.com/maps/@45.142475,-63.3602832,825m/data=!3m1!1e3?entry=ttu)
+tells me it is about 200 metres further north on the highway, just about at the
+bridge over the Stewiacke River.  That's about a 2 minute stroll away from the
+Mastodon Ridge buildings.  If a reader happens to take a photo of the position
+marker (which I hope is still there), I'd be happy to post it on this blog!
 
 
