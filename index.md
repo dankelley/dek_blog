@@ -8,9 +8,15 @@ figuring out how to transfer fancy code for method A to method B.
 
 # transferred to new blog
 
-Do this by e.g. cp a.Rmd ~/git/skills-github-pages/_posts/a.md and then edit
-out special things (like tags, category, summary) then alter date to new
-format, then insert plot links, then copy plot files.  Sheesh.
+Do this by e.g.
+```
+cp a.Rmd ~/git/skills-github-pages/_posts/a.md and then edit
+```
+But, wait, there's more!  Must next:
+1. edit the `.md` file to remove specialized yaml, like keywords/tags, category, summary, etc.
+2. put the date in new format format
+3. insert links to images
+4. copy images to `assets/images`
 
 * 2022-02-16-vim-julia.Rmd
 
