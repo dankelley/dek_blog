@@ -19,7 +19,7 @@ But, wait, there's more!  Must next:
 4. copy images to `assets/images`
 
 * 2022-02-16-vim-julia.Rmd
-* 2014-03-16-box-model.Rmd but math doesn't work (and css doesn't work)
+* 2014-03-16-box-model.Rmd but css is not working yet
 
 # not yet transferred to new blog
 
