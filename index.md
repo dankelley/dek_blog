@@ -19,6 +19,7 @@ But, wait, there's more!  Must next:
 4. copy images to `assets/images`
 
 * 2022-02-16-vim-julia.Rmd
+* 2014-03-16-box-model.Rmd but math doesn't work (and css doesn't work)
 
 # not yet transferred to new blog
 
@@ -57,7 +58,6 @@ But, wait, there's more!  Must next:
 * 2014-02-19-filtfilt.Rmd
 * 2014-03-05-error-bars-in-r.Rmd
 * 2014-03-12-digitizing-plots.Rmd
-* 2014-03-16-box-model.Rmd
 * 2014-03-22-sun-moon.Rmd
 * 2014-04-12-memoise.Rmd
 * 2014-04-30-colormap.Rmd
