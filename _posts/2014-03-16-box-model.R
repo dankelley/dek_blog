@@ -1,11 +1,11 @@
 png("2014-03-16-box-model.png")
 library(deSolve)
 IC <- 0
-parms <- list(A = 1e6, gamma = 5)
+parms <- list(A = 4e6, gamma = 10)
 sperday <- 86400 # seconds per day
 times <- seq(0, 10 * sperday, length.out = 200)
 F <- function(t) {
-    ifelse(t > sperday & t < 3 * sperday, exp(-(t - 2 * sperday)^2 / (0.25 * sperday)^2), 0)
+    ifelse(1.0 * sperday < t & t < 1.5 * sperday, 10, 0)
 }
 DE <- function(t, y, parms) {
     h <- y[1]
