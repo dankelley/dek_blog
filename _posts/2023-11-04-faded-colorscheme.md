@@ -22,3 +22,6 @@ contour(seq_len(dim(volcano)[1]), seq_len(dim(volcano)[2]), volcano, add = TRUE)
 imagep(volcano, col = faded(0.5))
 contour(seq_len(dim(volcano)[1]), seq_len(dim(volcano)[2]), volcano, add = TRUE)
 ```
+
+![2023-11-04-faded-colorscheme.png](2023-11-04-faded-colorscheme.png)
+
