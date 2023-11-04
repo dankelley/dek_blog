@@ -32,7 +32,7 @@ imagep(volcano, col = faded(0.5))
 contour(seq_len(dim(volcano)[1]), seq_len(dim(volcano)[2]), volcano, add = TRUE)
 ```
 
-1 ![Sample faded palette. Left: unfaded. Right: faded.](/skills-github-pages/assets/figs/2023-11-04-faded-colorscheme.png)
+1 ![a](/skills-github-pages/assets/figs/2023-11-04-faded-colorscheme.png)
 
 2 ![a](/assets/figs/2023-11-04-faded-colorscheme.png)
 
@@ -43,4 +43,6 @@ contour(seq_len(dim(volcano)[1]), seq_len(dim(volcano)[2]), volcano, add = TRUE)
 5 ![a](figs/2023-11-04-faded-colorscheme.png)
 
 6 ![a](/2023-11-04-faded-colorscheme.png)
+
+7 ![a](/skills-github-pages/docs/assets/figs/2023-11-04-faded-colorscheme.png)
 
