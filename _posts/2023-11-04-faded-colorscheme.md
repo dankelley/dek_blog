@@ -16,7 +16,6 @@ scheme I often use for other things, and it suffers the problem of hiding
 contours.
 
 ```R
-# faded_palette.R
 # How to fade a colour palette
 library(oce)
 faded <- function(alpha = 0.1, col = oce::oceColorsTurbo) {
@@ -25,12 +24,14 @@ faded <- function(alpha = 0.1, col = oce::oceColorsTurbo) {
 }
 par(mfrow = c(1, 2))
 # normal
+x <- seq_len(dim(volcano)[1])
+y <- seq_len(dim(volcano)[2])
 imagep(volcano, col = oceColorsTurbo)
-contour(seq_len(dim(volcano)[1]), seq_len(dim(volcano)[2]), volcano, add = TRUE)
+contour(x, y, volcano, add = TRUE, labcex = 1)
 # faded
 imagep(volcano, col = faded(0.5))
-contour(seq_len(dim(volcano)[1]), seq_len(dim(volcano)[2]), volcano, add = TRUE)
+contour(x, y, volcano, add = TRUE, labcex = 1)
 ```
 
-7 ![Left: using `oceColorsTurbo` color scheme. Right: using faded version.](/skills-github-pages/docs/assets/images/2023-11-04-faded-colorscheme.png)
+![Left: using `oceColorsTurbo` color scheme. Right: using faded version.](/skills-github-pages/docs/assets/images/2023-11-04-faded-colorscheme.png)
 
