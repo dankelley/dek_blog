@@ -32,19 +32,5 @@ imagep(volcano, col = faded(0.5))
 contour(seq_len(dim(volcano)[1]), seq_len(dim(volcano)[2]), volcano, add = TRUE)
 ```
 
-1 ![a](/skills-github-pages/assets/images/2023-11-04-faded-colorscheme.png)
-
-2 ![a](/assets/images/2023-11-04-faded-colorscheme.png)
-
-3 ![a](assets/images/2023-11-04-faded-colorscheme.png)
-
-4 ![a](/images/2023-11-04-faded-colorscheme.png)
-
-5 ![a](images/2023-11-04-faded-colorscheme.png)
-
-6 ![a](/2023-11-04-faded-colorscheme.png)
-
-7 ![a](/skills-github-pages/docs/assets/images/2023-11-04-faded-colorscheme.png)
-
-8 ![a](/skills-github-pages/docs/assets/2023-11-04-faded-colorscheme.png)
+7 ![Left: using `oceColorsTurbo` color scheme. Right: using faded version.](/skills-github-pages/docs/assets/images/2023-11-04-faded-colorscheme.png)
 
