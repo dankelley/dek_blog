@@ -33,5 +33,5 @@ imagep(volcano, col = faded(0.5))
 contour(x, y, volcano, add = TRUE, labcex = 1)
 ```
 
-![Left: using `oceColorsTurbo` color scheme. Right: using faded version.](/skills-github-pages/docs/assets/images/2023-11-04-faded-colorscheme.png)
+![Left: using `oceColorsTurbo` color scheme. Right: using faded version.](/dek_blog/docs/assets/images/2023-11-04-faded-colorscheme.png)
 
