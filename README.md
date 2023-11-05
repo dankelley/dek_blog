@@ -18,9 +18,13 @@ But, wait, there's more!  Must next:
 
 # Items already transferred from the old blog
 
+I am not transferring items in time sequence, working instead by
+saliency.
+
 * 2022-02-16-vim-julia.Rmd
-* 2014-03-16-box-model.Rmd but css is not working yet
 * 2020-09-30-dislike-ggplot.md
+* 2015-08-25-email-graphs.Rmd
+* 2014-03-16-box-model.Rmd but css is not working yet
 
 # Items not yet transferred from the old blog
 
@@ -45,7 +49,6 @@ But, wait, there's more!  Must next:
 * 2015-04-03-oce-proj.Rmd
 * 2015-05-10-ITS90-temperature-scale.Rmd
 * 2015-08-22-woa-2013-2.Rmd
-* 2015-08-25-email-graphs.Rmd
 * 2015-10-18-shiny-ctd-trim.Rmd
 * 2015-11-07-giss.Rmd
 * 2014-01-15-colourizing-along-a-trajectory.Rmd
