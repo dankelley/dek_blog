@@ -6,49 +6,37 @@ date: 2020-09-30
 With base graphics, a histogram of 100 million points
 
 ```R
-d <- data.frame(x=rnorm(1e8))
-system.time(hist(x))
+d <- data.frame(x = rnorm(1e8))
+system.time(hist(d$x))
 ```
 
-takes just
+takes
 
 ```
      user  system elapsed
-    0.044   0.004   0.052
+    3.910   0.821   4.907
 ```
-
-which means that the result is ready as my pinkie finger is rising from the
-'Return' key.
-
-In contrast, if I use ggplot as in
+By contrast, if I use ggplot as in
 
 ```R
 library(ggplot2)
 system.time({p<-ggplot(d) + aes(x=x) + geom_histogram();print(p)})
 ```
 
-I find I have to wait *much* longer.  The results are
+I see that the results take an order of magnitude longer:
 
 ```
   `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
      user  system elapsed
-   43.877  13.766  60.200
+   35.308  13.481  50.338
 ```
 
-so this sub-second task has ballooned to a full minute.  Since this is not a
-large dataset in my line of work, the test shows that my brand-new machine acts
-more like something from the 1980s.
-
-Don't get me wrong.  I liked the eighties.  But I don't want to go back to 
-1980s computing power.
-
-And now that I'm revealing myself to be a cranky old fart, I'll add two more
-complaints about ggplot defaults:
+As if an othe rder-of-magnitude speed reduction were not enough, there are some other
+things that I dislike.
 
 1. The function ought to choose an appropriate binwidth, instead of saying that
    it has chosen a poor default.
-2. While the ggplot graph looks pretty enough for a magazine, the default
-   low-contrast style can be a problem for some viewers and some
-   printing/reproduction methods. (Yes, I know I can change to a more sensible
-   style, but awkward defaults are annoying.)
+2. The ggplot is in a low-contrast style can be a problem for some viewers and
+   some printing/reproduction methods. (I know I don't need to use the default,
+   of course.)
 
