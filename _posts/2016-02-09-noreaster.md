@@ -130,12 +130,12 @@ abline(0, -1, col = "lightgray")
 
 # Discussion
 
-Although waves are not entirely related to *local* winds, it is interesting to
-
-compare them. The time-series plots indicate a correspondence of high wind and
-large waves. However, the wind-rose plot indicates that this is mainly true for
-certain wind directions. The strong winds from February 8 that caused the
-largest waves are indicated with the dark-red dot in the lower-left quadrant.
-This quadrant corresponds to winds that locals call Nor'Eastly, and those
-locals who take to the sea will not be surprised by the wave heights indicated
-on the storm, or by their long period as indicated in the time-series plot.
+Although waves are not entirely related to *local* winds, it may be worth
+comparing them. The time-series plots indicate a correspondence of high wind
+and large waves. However, the wind-rose plot indicates that this is mainly true
+for certain wind directions. The strong winds from February 8 that caused the
+largest waves are indicated with the dark-red dot in the lower-left
+quadrant. This quadrant corresponds to winds that locals call NorEasterly,
+and those locals who take to the sea will not be surprised by the wave
+heights indicated on the storm, or by their long period as indicated in the
+time-series plot.

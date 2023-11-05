@@ -23,6 +23,7 @@ saliency.
 
 * 2022-02-16-vim-julia.Rmd
 * 2020-09-30-dislike-ggplot.md
+* 2016-02-09-noreaster.Rmd
 * 2015-08-25-email-graphs.Rmd
 * 2014-03-16-box-model.Rmd but css is not working yet
 
@@ -37,7 +38,6 @@ saliency.
 * 2019-12-15-new-R-palette.Rmd
 * 2018-10-06-oce-1.0-published.Rmd
 * 2017-12-21-spectrum-length.Rmd
-* 2016-02-09-noreaster.Rmd
 * 2016-02-20-landsat-hue.Rmd
 * 2016-02-21-landsat-hue-2.Rmd
 * 2016-02-22-landsat-hue-3.Rmd
