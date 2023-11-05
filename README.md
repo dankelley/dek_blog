@@ -24,6 +24,7 @@ saliency.
 * 2022-02-16-vim-julia.Rmd
 * 2020-09-30-dislike-ggplot.md
 * 2016-02-09-noreaster.Rmd
+* 2015-10-18-shiny-ctd-trim.Rmd
 * 2015-08-25-email-graphs.Rmd
 * 2014-03-16-box-model.Rmd but css is not working yet
 
@@ -49,7 +50,6 @@ saliency.
 * 2015-04-03-oce-proj.Rmd
 * 2015-05-10-ITS90-temperature-scale.Rmd
 * 2015-08-22-woa-2013-2.Rmd
-* 2015-10-18-shiny-ctd-trim.Rmd
 * 2015-11-07-giss.Rmd
 * 2014-01-15-colourizing-along-a-trajectory.Rmd
 * 2014-01-30-gmt-colors-topography.Rmd
