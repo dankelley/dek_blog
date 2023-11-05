@@ -1,5 +1,5 @@
 ---
-title: trimming CTD files with shiny
+title: Trimming CTD files with shiny
 time: 2015-10-18
 ---
 
@@ -121,10 +121,10 @@ in SBE format? etc.
 
 # Example initial view
 
-![Original view]({{ site.url }}/docs/assets/images/2015-10-18-shiny-ctd-trim-1.png)
+![Original view](/dek_blog/docs/assets/images/2015-10-18-shiny-ctd-trim-1.png)
 
 
 # Example trimmed view
 
-![Trimmed view]({{ site.url }}/docs/assets/images/2015-10-18-shiny-ctd-trim-2.png)
+![Trimmed view](/dek_blog/docs/assets/images/2015-10-18-shiny-ctd-trim-2.png)
 
