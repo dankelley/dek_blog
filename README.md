@@ -28,6 +28,7 @@ saliency.
 * 2015-08-25-email-graphs
 * 2014-03-16-box-model
 * 2013-12-28-sundial
+* 2013-12-21-solstice
 
 # Items not yet transferred from the old blog
 
@@ -71,5 +72,4 @@ saliency.
 * 2014-06-22-gulf-stream-center
 * 2014-07-01-landsat
 * 2014-11-10-solar-navigation
-* 2013-12-21-solstice
 
