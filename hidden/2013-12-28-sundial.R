@@ -31,7 +31,7 @@ sundial <- function(
             gz <- gy * tan(lat * pi / 180)
             R <- gz / tan(-sa$altitude * pi / 180) # radius of shadow
             theta <- (90 - sa$azimuth) * pi / 180
-            par(mar = rep(2, 4))
+            #par(mar = rep(2, 4))
             x <- gx + R * cos(theta)
             y <- gy + R * sin(theta)
             len <- max(sqrt(x^2 + y^2))
@@ -84,5 +84,7 @@ sundial <- function(
         }
     }
 }
+
+par(mar = c(1, 1, 1, 1))
 sundial()
 dev.off()
