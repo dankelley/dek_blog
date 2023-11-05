@@ -1,5 +1,5 @@
 ---
-title: email graphs
+title: Graphing Email Logs
 date: 2015-08-25
 summary: R code is provided to create graphs of email timing. Such graphs can be helpful in documenting progress in group projects for which email frequency is of interest.
 ---

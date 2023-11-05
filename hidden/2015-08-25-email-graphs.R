@@ -1,4 +1,4 @@
-png("../docs/assets/images/2015-10-25-email-graphs.png",
+png("../docs/assets/images/2015-08-25-email-graphs.png",
     units = "in", res = 200, width = 7, height = 4, pointsize = 10
 )
 
