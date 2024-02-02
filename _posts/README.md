@@ -11,5 +11,5 @@ How to add new content.
 3. Go one level up, and then use `git add`, then `git commit` and finally `git
    push` to update the content on the server.
 4. Wait 5 minutes or so, and then check the webpage to see if the update
-   worked, and if you like the look of the content. It 
+   worked, and if you like the look of the content.
 
