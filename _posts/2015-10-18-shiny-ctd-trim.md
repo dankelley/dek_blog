@@ -1,5 +1,6 @@
 ---
 title: Trimming CTD files with shiny
+author: Dan Kelley
 time: 2015-10-18
 ---
 

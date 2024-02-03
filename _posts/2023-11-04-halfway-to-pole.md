@@ -1,5 +1,6 @@
 ---
 title: Halfway to the Pole
+author: Dan Kelley
 date: 2023-11-04
 ---
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>

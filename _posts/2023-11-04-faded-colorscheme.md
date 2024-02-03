@@ -1,5 +1,6 @@
 ---
 title: Faded colourscheme in R
+author: Dan Kelley
 date: 2023-11-04
 ---
 

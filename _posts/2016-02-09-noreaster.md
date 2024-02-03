@@ -1,5 +1,6 @@
 ---
 title: Wind and waves during a Nor'Easter storm
+author: Dan Kelley
 date: 2016-02-09
 ---
 

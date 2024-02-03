@@ -1,5 +1,6 @@
 ---
 title: Why I use base graphics instead of ggplot2
+author: Dan Kelley
 date: 2020-09-30
 ---
 

@@ -1,7 +1,15 @@
+---
+title: How to add content to this blog
+author: Dan Kelley
+date: 2020-01-01
+---
+
 How to add new content.
 
-1. Write a `.md` file, with name `YYYY-MM-DD-topic.md`, where YYYY is the year,
-   etc.
+1. Write a `.md` file in the `_posts` directory, with name
+   `YYYY-MM-DD-topic.md`, where YYYY is the year, etc. Separate words in the
+   topic part using hyphens.  Use <pre>```R</pre> triple-backtic-R notation for
+   R code, and similar for other languages.
 2. If this `.md` file contains code that is to produce results that will go in
    the blog, isolate this code and run it.  If the output is textual, include
    it in the `.md` file.  If it is a figure, put it in `../docs/assets/images`
