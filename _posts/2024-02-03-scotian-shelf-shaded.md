@@ -4,12 +4,25 @@ author: Dan Kelley
 date: 2024-02-03
 ---
 
-The code at the bottom of this posting makes two diagrams. The first, Figure 1
-here, is a shaded view of ocean bathymetry.  The second, Figure 2 here, is a
-more conventional view.  The latter is conventional in technical treatments,
-and it is usefully quantative when a colourbar is also shown. But, a good
-argument could be made for the shaded view being more effective at conveying
-patterns quickly and clearly.
+The code at the bottom of this posting makes two diagrams for displaying the
+bathymetry (i.e. the water depth) near Nova Scotia.
+
+Figure 1 is a shaded view of ocean bathymetry, in which the colouring evokes
+how the bottom might look if drained of water and illuminated by a glancing
+light shining diagonally from the top-left corner.  This sort of diagram can be
+effective in communicating qualitative impression of depth patterns.
+
+On the other hand, Figure 2 represents depth directly, by colour. Paired with a
+colour palette and perhaps superimposed contours or banded colours, such
+diagrams have the advantage of providing a quantitative indication of depth at
+any given location.
+
+Which representation is better?  I think the answer depends on the application.
+For a scientific paper, I would use something like Figure 2, with a colour
+palette, and perhaps with added contours.  But for a non-technical audience or
+in an application where the depth patterns are the prime interest, I might use
+something like Figure 1. And it might be useful to think of ways to combine the
+two approaches...
 
 **Figure 1. Shaded view**
 
