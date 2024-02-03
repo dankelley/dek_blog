@@ -4,11 +4,20 @@ author: Dan Kelley
 date: 2024-02-03
 ---
 
-The following code makes a shaded view of the shape of the ocean bottom near
-Nova Scotia. It is impossible to find actual depths from such a diagram -- for
-that, a normal bathymetric chart is better -- but it *is* quite evocative.
+The code at the bottom of this posting makes two diagrams. The first, Figure 1
+here, is a shaded view of ocean bathymetry.  The second, Figure 2 here, is a
+more conventional view.  The latter is conventional in technical treatments,
+and it is usefully quantative when a colourbar is also shown. But, a good
+argument could be made for the shaded view being more effective at conveying
+patterns quickly and clearly.
 
-![scotian_shelf_shaded](/dek_blog/docs/assets/images/2024-02-03-scotian-shelf-shaded.png)
+**Figure 1. Shaded view**
+
+![scotian_shelf_shaded](/dek_blog/docs/assets/images/2024-02-03-scotian-shelf-shaded-1.png)
+
+**Figure 2. Shaded view**
+
+![scotian_shelf_shaded](/dek_blog/docs/assets/images/2024-02-03-scotian-shelf-shaded-2.png)
 
 ```R
 Q <- 0.95 # quantile for slope cutoff
@@ -26,10 +35,9 @@ g <- grad(z, x, y)
 G <- asp * g$gx - g$gy # note the asp term
 zlim <- quantile(abs(G), Q) * c(-1, 1)
 G[land] <- NA
-A <- 5.65 / 7 # from fiddling to remove whitespace
 if (!interactive()) {
-    png("topo_SS.png",
-        width = 7, height = 7 * A, unit = "in", res = 400,
+    png("topo_SS_%d.png",
+        width = 7, height = 5.5, unit = "in", res = 400,
         type = "cairo", antialias = "none", family = "Arial"
     )
 }
@@ -44,6 +52,17 @@ imagep(x, y, G,
 contour(x, y, z,
     levels = 0, drawlabels = FALSE,
     add = TRUE, lwd = 0.3
+)
+bathy <- z
+bathy[bathy > 0] <- NA
+imagep(x, y, bathy,
+    zlim = c(-400, 0),
+    asp = asp,
+    col = oceColorsGebco,
+    decimate = FALSE,
+    missingColor = "tan",
+    mar = c(2.0, 2.0, 1.0, 1.0),
+    drawPalette = FALSE
 )
 if (!interactive()) {
     dev.off()
