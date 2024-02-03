@@ -1,7 +1,7 @@
 ---
 title: Scotian Shelf Bathymetry in Shaded View
 author: Dan Kelley
-date: 2024-02-04
+date: 2024-02-03
 ---
 
 The following code makes a shaded view of the shape of the ocean bottom near

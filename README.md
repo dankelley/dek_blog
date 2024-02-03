@@ -12,7 +12,7 @@ cp a ~/git/skills-github-pages/_posts/a.md and then edit
 ```
 But, wait, there's more!  Must next:
 1. edit the `.md` file to remove specialized yaml, like keywords/tags, category, summary, etc.
-2. put the date in new format format
+2. put the date in new format
 3. insert links to images
 4. copy images to `assets/images`
 
