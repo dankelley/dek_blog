@@ -1,5 +1,6 @@
 ---
 title: Lidar image for Citadel Hill in Halifax NS
+author: Dan Kelley
 date: 2024-02-03
 ---
 
