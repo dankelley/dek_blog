@@ -115,3 +115,8 @@ message("Created ", paste0("lidar_", name, ".png"))
 3. The `cmocean` package for colour schemes.
    [https://cran.r-project.org/web/packages/cmocean/vignettes/cmocean.html](https://cran.r-project.org/web/packages/cmocean/vignettes/cmocean.html)
 
+4. Youtube video about LIDAR methodology, a bit dated but at a good level. I
+   think there is a typo on a slide about accuracy, though, since the presenter
+   said e.g. 5cm and the slide said 0.05cm, likely indicating that the slide
+   unit was meant to be metres.
+   [https://www.youtube.com/watch?v=PRE5KV2_w3Q](https://www.youtube.com/watch?v=PRE5KV2_w3Q)
