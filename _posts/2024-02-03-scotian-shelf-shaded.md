@@ -8,7 +8,7 @@ The following code makes a shaded view of the shape of the ocean bottom near
 Nova Scotia. It is impossible to find actual depths from such a diagram -- for
 that, a normal bathymetric chart is better -- but it *is* quite evocative.
 
-![scotian_shelf_shaded](/dek_blog/docs/assets/images/2024-02-04-scotian-shelf-shaded.png)
+![scotian_shelf_shaded](/dek_blog/docs/assets/images/2024-02-03-scotian-shelf-shaded.png)
 
 ```R
 Q <- 0.95 # quantile for slope cutoff
