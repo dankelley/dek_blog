@@ -1,7 +1,7 @@
 ---
 title: How to add content to this blog
 author: Dan Kelley
-date: 2014-11-01
+date: 2013-12-20
 ---
 
 How to add new content.
