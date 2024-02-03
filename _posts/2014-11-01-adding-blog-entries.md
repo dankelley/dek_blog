@@ -1,7 +1,7 @@
 ---
 title: How to add content to this blog
 author: Dan Kelley
-date: 2020-01-01
+date: 2014-11-01
 ---
 
 How to add new content.
