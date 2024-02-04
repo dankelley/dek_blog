@@ -37,6 +37,24 @@ their own favourite spots, but I'll point out just a few.
 
 # R code to make the diagram
 
+This code uses two packages, `oce` and `dod`.  The first is on CRAN, and may be
+installed using
+
+```R
+install.packages("oce")
+```
+
+while the second is not yet on CRAN, and must be installed with
+```R
+# install.packages("remotes")
+remotes::install_github("dankelley/dod")
+```
+
+where the first line must be un-commented if `remotes` is not already
+installed.
+
+
+
 ```R
 Q <- 0.95 # quantile for slope cutoff
 library(oce)
