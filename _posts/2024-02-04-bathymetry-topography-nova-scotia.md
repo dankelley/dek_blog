@@ -35,7 +35,7 @@ their own favourite spots, but I'll point out just a few.
    Cobequid Highlands, Nova Scotia", Atlantic Geology, 2003
    https://journals.lib.unb.ca/index.php/ag/article/view/1259/1652
 
-# Code to make the diagram
+# R code to make the diagram
 
 ```R
 Q <- 0.95 # quantile for slope cutoff
