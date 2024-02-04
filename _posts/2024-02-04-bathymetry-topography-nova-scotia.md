@@ -5,16 +5,26 @@ date: 2024-02-04
 ---
 
 This is a followup to the two previous posts, dealing with representing the
-shape of the earth surface with a shaded scheme.  Blue hues represent the ocean,
-and golden hues represent the land.
+shape of the earth surface with a shaded scheme.  The R code at the end of this
+posting shows how to make the diagram I show here.
 
-There is a lot to see here.  The Annapolis Valley, to the south of the Bay of
-Fundy, is particularly prominent as a flat area bounded by high land to the
-north and soutrh.  Cape Breton has a complex pattern of relief that is will be
-well known to those who have travelled there. An important fault line running
-from east to west at about 45.5N is visible both above and below sealevel; for
-more on this, and much of the geology of the region, see Pe-piper and Piper
-(2003) and references therein.
+In the diagram, blue hues represent the ocean, and golden hues represent the
+land.  As with the two previous posts, brightness is based on surface slope,
+meant to evoke illumination by a light source in the upper-left corner,
+pointing towards the lower-right corner.
+
+There is a lot to see in this diagram.  Nova Scotians will likely find
+their own favourite spots, but I'll point out just a few.
+
+1. The Annapolis Valley, to the south of the Bay of Fundy, is particularly
+   prominent as a flat area bounded by high land to the north and soutrh.
+2. Cape Breton has a complex pattern of relief that is will be well known to
+   those who have travelled there.
+3. A fault line running from east to west at about 45.5N is visible both above
+   and below sealevel. The high lands to the north of that line, known as the
+   Cobequid Mountains, are quite visible in this view.  For more on this
+   assemblage, and the geology of Nova Scotia generally, see Pe-piper and Piper
+   (2003) and references therein.
 
 ![Bathymetry and topography in the region of Nova Scotia.](/dek_blog/docs/assets/images/2024-02-04-bathymetry-topography-nova-scotia.png)
 
