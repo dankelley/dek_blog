@@ -18,6 +18,15 @@ more on this, and much of the geology of the region, see Pe-piper and Piper
 
 ![Bathymetry and topography in the region of Nova Scotia.](/dek_blog/docs/assets/images/2024-02-04-bathymetry-topography-nova-scotia.png)
 
+
+# References
+
+1. George Pe-piper, David J.W. Piper, "A synopsis of the geology of the
+   Cobequid Highlands, Nova Scotia", Atlantic Geology, 2003
+   https://journals.lib.unb.ca/index.php/ag/article/view/1259/1652
+
+# Code to make the diagram
+
 ```R
 Q <- 0.95 # quantile for slope cutoff
 library(oce)
@@ -64,8 +73,3 @@ if (!interactive()) {
 }
 ```
 
-# References
-
-1. George Pe-piper, David J.W. Piper, "A synopsis of the geology of the
-   Cobequid Highlands, Nova Scotia", Atlantic Geology, 2003
-   https://journals.lib.unb.ca/index.php/ag/article/view/1259/1652
