@@ -1,7 +1,7 @@
 ---
 title: Bathymetry and Topography near Nova Scotia
 author: Dan Kelley
-date: 2013-12-20
+date: 2024-02-04
 ---
 
 This is a followup to the two previous posts, dealing with representing the
