@@ -4,9 +4,13 @@ author: Dan Kelley
 date: 2024-02-04
 ---
 
-This is a followup to the two previous posts, dealing with representing the
-shape of the earth surface with a shaded scheme.  The R code at the end of this
-posting shows how to make the diagram I show here.
+This is a followup to the two previous posts
+[here](https://dankelley.github.io/dek_blog/2024/02/03/scotian-shelf-shaded.html)
+and
+[here](https://dankelley.github.io/dek_blog/2024/02/03/lidar-halifax.html)),
+dealing with representing the shape of the earth surface with a shaded scheme.
+The R code at the end of this posting shows how to make the diagram I show
+here.
 
 In the diagram, blue hues represent the ocean, and golden hues represent the
 land.  As with the two previous posts, brightness is based on surface slope,
@@ -53,7 +57,21 @@ remotes::install_github("dankelley/dod")
 where the first line must be un-commented if `remotes` is not already
 installed.
 
-
+If you use this as a pattern for a diagram of your own, there are two things
+you will likely want to adjust.
+1. The `resolution` parameter of `dod.topo()`, which is the resolution of the
+   topographic matrix in arc minutes.  (One arc minute in latitude corresponds
+   to 1 nautical mile, or a bit under 2 km.  See `?dod.topo` for more on this.)
+2. The `height` parameter of `png()`, which I have adjusted here to remove
+   white bands that otherwise appear at either the top and bottom of the image,
+   or the left and right.  These bands occur if the aspect ratio of the axis
+   frame is not equal to the aspect ratio of the data view.  A few minutes of
+   adjustment is all it should take to find a good value.  Note that I run this
+   code in non-interactive mode.  If you tend to run code through RStudio or in
+   another interactive manner, you can adjust the plot size and redraw until
+   the white bands go away, but I recommend working non-interactively (or
+   eliminating the `if` condistion) because then your code will be
+   reproducible and you can use the same parameters for other plots.
 
 ```R
 Q <- 0.95 # quantile for slope cutoff
