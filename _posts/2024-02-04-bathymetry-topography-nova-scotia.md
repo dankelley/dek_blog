@@ -101,11 +101,14 @@ if (!interactive()) {
 # Water
 water <- G0
 water[z > 0] <- NA
-cmwater <- colormap(zlim = zlim, col = cmocean::cmocean("deep", direction = -1))
-imagep(x, y, water, asp = asp,
+cmwater <- colormap(
+    zlim = zlim,
+    col = cmocean::cmocean("deep", direction = -1)
+)
+imagep(x, y, water,
+    asp = asp,
     colormap = cmwater,
     decimate = FALSE,
-    missingColor = "tan",
     mar = c(2.0, 2.0, 1.0, 1.0),
     drawPalette = FALSE
 )
@@ -113,7 +116,8 @@ imagep(x, y, water, asp = asp,
 land <- G0
 land[z < 0] <- NA
 cmland <- colormap(zlim = zlim, col = cmocean::cmocean("solar"))
-imagep(x, y, land, asp = asp,
+imagep(x, y, land,
+    asp = asp,
     colormap = cmland,
     decimate = FALSE,
     add = TRUE,
