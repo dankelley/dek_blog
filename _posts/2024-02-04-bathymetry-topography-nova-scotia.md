@@ -70,8 +70,13 @@ you will likely want to adjust.
    code in non-interactive mode.  If you tend to run code through RStudio or in
    another interactive manner, you can adjust the plot size and redraw until
    the white bands go away, but I recommend working non-interactively (or
-   eliminating the `if` condistion) because then your code will be
-   reproducible and you can use the same parameters for other plots.
+   eliminating the `if` condistion) because then your code will be reproducible
+   and you can use the same parameters for other plots.
+3. You may wish to alter the definition of `Q`.  Try using slightly larger or
+   smaller values (in the range from 0 to 1) to see how that affects the
+   contrast. Your goal will likely be to see lots of detail, without having
+   some areas be overly dark or light.  Think of this as a sort of contrast
+   parameter.
 
 ```R
 Q <- 0.95 # quantile for slope cutoff
