@@ -4,18 +4,18 @@ author: Dan Kelley
 date: 2024-02-04
 ---
 
-This is a followup to the two previous posts
+This is a followup to two previous posts
 ([here](https://dankelley.github.io/dek_blog/2024/02/03/scotian-shelf-shaded.html)
 and
 [here](https://dankelley.github.io/dek_blog/2024/02/03/lidar-halifax.html)),
 dealing with representing the shape of the earth surface with a shaded scheme.
-The R code at the end of this posting shows how to make the diagram I show
-here.
+Here I discuss a view of land/sea topography in the region of Nova Scotia,
+Canada.
 
-In the diagram, blue hues represent the ocean, and golden hues represent the
-land.  As with the two previous posts, brightness is based on surface slope,
-meant to evoke illumination by a light source in the upper-left corner,
-pointing towards the lower-right corner.
+In the diagram shown below, blue hues represent the ocean, and golden hues
+represent the land.  As with the two previous posts, brightness is based on
+surface slope, meant to evoke illumination by a light source in the upper-left
+corner, pointing towards the lower-right corner.
 
 There is a lot to see in this diagram.  Nova Scotians will likely find
 their own favourite spots, but I'll point out just a few.
