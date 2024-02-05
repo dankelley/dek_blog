@@ -5,7 +5,7 @@ date: 2024-02-04
 ---
 
 This is a followup to the two previous posts
-[here](https://dankelley.github.io/dek_blog/2024/02/03/scotian-shelf-shaded.html)
+([here](https://dankelley.github.io/dek_blog/2024/02/03/scotian-shelf-shaded.html)
 and
 [here](https://dankelley.github.io/dek_blog/2024/02/03/lidar-halifax.html)),
 dealing with representing the shape of the earth surface with a shaded scheme.
