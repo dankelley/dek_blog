@@ -31,7 +31,7 @@ region.  Indeed, the north pole appears as a circle in AEA.
 
 ### Appendix: R code to make the plot
 
-```{R}
+```R
 library(oce)
 data(coastlineWorld)
 lon <- coastlineWorld[["longitude"]]
