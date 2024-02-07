@@ -36,7 +36,8 @@ library(oce)
 data(coastlineWorld)
 lon <- coastlineWorld[["longitude"]]
 lat <- coastlineWorld[["latitude"]]
-png("2024-02-07-map-projections.png", width = 7, height = 7, unit = "in", res = 200)
+png("2024-02-07-map-projections.png", width = 7, height = 7,
+    unit = "in", res = 200)
 lonS <- c(-70, -70, -50, -50)
 lonL <- lonS + c(-30, -30, 30, 30)
 latS <- c(30, 50, 30, 50)
