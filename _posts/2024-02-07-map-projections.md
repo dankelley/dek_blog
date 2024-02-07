@@ -21,11 +21,12 @@ region.  Indeed, the north pole appears as a circle in AEA.
 
 ### References
 
-1. “Albers Equal Area — PROJ 9.3.1 Documentation.” Accessed February 7, 2024.
-   https://proj.org/en/9.3/operations/projections/aea.html.
+1. "Albers Equal Area — PROJ 9.3.1 Documentation." Accessed February 7, 2024.
+   [https://proj.org/en/9.3/operations/projections/aea.html](https://proj.org/en/9.3/operations/projections/aea.html)
 
-2. “Lambert Conformal Conic — PROJ 9.3.1 Documentation.” Accessed February 7,
-   2024. https://proj.org/en/9.3/operations/projections/lcc.html.
+2. "Lambert Conformal Conic — PROJ 9.3.1 Documentation." Accessed February 7,
+   2024.
+   [https://proj.org/en/9.3/operations/projections/lcc.html](https://proj.org/en/9.3/operations/projections/lcc.html)
 
 
 ### Appendix: R code to make the plot
