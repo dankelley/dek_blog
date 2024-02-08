@@ -1,7 +1,7 @@
 ---
-title: Lidar image for Citadel Hill in Halifax NS
+title: Using RDA Files as a Notebook
 author: Dan Kelley
-date: 2024-02-03
+date: 2024-02-08
 ---
 
 Lots of my work involves quite a few R files that are executed in order.  For
