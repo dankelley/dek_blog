@@ -66,9 +66,9 @@ writeRDA <- function(name = NULL, value = NULL, rdaName = "results.rda") {
 
 # demo
 createRDA()
-message("test=", readRDA("test"), " (expect empty)")
+readRDA("test")  # expect empty
 writeRDA("test", 999)
-message("test=", readRDA("test"), " (expect 999)")
-writeRDA("test", 888)
-message("test=", readRDA("test"), " (expect 888)")
+readRDA("test")  # expect 999
+writeRDA("test", list(A=1, B=2))
+readRDA("test")  # expect a list
 ```
