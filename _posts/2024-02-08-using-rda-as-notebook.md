@@ -33,6 +33,11 @@ you see below in an actual project, to see what "feels right", rather than
 planning it out in advance.  My approach is to use a saw before a plane, a
 plane before sandpaper, and so on.
 
+Here's an example of why I made this. I like how I can insert comments in
+there, as well as values.  And I think it will be convenient in an Rmd or Rnw
+file (that is, in a final document) to have all such things loadable in a
+single rda file.
+
 
 ```R
 debug <- FALSE
@@ -41,7 +46,7 @@ dmsg <- function(...) if (debug) message(...)
 createRDA <- function(rdaName = "results.rda", clear = TRUE) {
     if (clear || !file.exists(rdaName)) {
         dmsg("creating RDA file \"", rdaName, "\"")
-        results <- list(name = NULL, value = NULL, comment = NULL)
+        results <- list() # stores name, value, and comment
         save(results, file = rdaName)
     } else {
         dmsg("RDA file \"", rdaName, "\" already exists, so will not be recreated")
