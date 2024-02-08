@@ -41,19 +41,25 @@ file (that is, in a final document) to have all such things loadable in a
 single rda file.
 
 ```R
-> load("results.rda")
-> str(results)
-List of 3
- $ havePair:List of 2
+> load("results.rda"); str(results)
+List of 4
+ $ havePair:List of 3
   ..$ value  : Named logi [1:1453] TRUE TRUE TRUE FALSE TRUE TRUE ...
   .. ..- attr(*, "names")= chr [1:1453] "D1901534_152" "D1901534_153" "D3901601_002" "D3901601_003" ...
   ..$ comment: chr "profile has warmish-coldish pair"
- $ m1ar2   :List of 2
+  ..$ context: chr "/Users/kelley/git/argo_intrusions/sandbox/dek/01"
+ $ m1ar2   :List of 3
   ..$ value  : num 0.709
-  ..$ comment: chr "adj R^2 for lm() of tagged fraction vs longitude"
- $ m1pr    :List of 2
-  ..$ value  : num 3.4e-09
-  ..$ comment: chr "p of tagged fraction vs longitude"
+  ..$ comment: chr "adj R^2 from lm() of tagged fraction vs longitude"
+  ..$ context: chr "/Users/kelley/git/argo_intrusions/sandbox/dek/01"
+ $ m1p     :List of 3
+  ..$ value  : num 3.39e-09
+  ..$ comment: chr "p from lm() of tagged fraction vs longitude"
+  ..$ context: chr "/Users/kelley/git/argo_intrusions/sandbox/dek/01"
+ $ m2p     :List of 3
+  ..$ value  : num 0.564
+  ..$ comment: chr "p from lm() of # profiles vs longitude"
+  ..$ context: chr "/Users/kelley/git/argo_intrusions/sandbox/dek/01"
 ```
 
 ### Code
@@ -63,10 +69,10 @@ List of 3
 debug <- FALSE
 dmsg <- function(...) if (debug) message(...)
 
-createRDA <- function(rdaName = "results.rda", clear = TRUE) {
+createRDA <- function(rdaName = "results.rda", clear = FALSE) {
     if (clear || !file.exists(rdaName)) {
         dmsg("creating RDA file \"", rdaName, "\"")
-        results <- list() # stores name, value, and comment
+        results <- list() # stores name, value, comment and context
         save(results, file = rdaName)
     } else {
         dmsg("RDA file \"", rdaName, "\" already exists, so will not be recreated")
@@ -80,21 +86,25 @@ readRDA <- function(name = NULL, rdaName = "results.rda") {
     get(load(rdaName))[[name]]
 }
 
-writeRDA <- function(name = NULL, value = NULL, comment = "", rdaName = "results.rda") {
+writeRDA <- function(name = NULL, value = NULL, comment = "", context = NULL, rdaName = "results.rda") {
     if (!file.exists(rdaName)) {
         stop("RDA file \"", rdaName, "\" does not exist yet; use createRDA()")
     }
     load(rdaName) # defines 'results'
-    results[[name]] <- list(value = value, comment = comment)
+    if (is.null(context)) {
+        context <- getwd()
+    }
+    results[[name]] <- list(value = value, comment = comment, context = context)
+    #print(str(results))
     save(results, file = rdaName)
 }
 
-# demo
-createRDA(clear = TRUE)
-readRDA("test")
-stopifnot(is.null(readRDA("test")))
-writeRDA("test", 999)
-stopifnot(identical(list(value = 999, comment = ""), readRDA("test")))
-writeRDA("test", list(A = 1, B = 2), "a list")
-stopifnot(identical(A, list(value = list(A = 1, B = 2), comment = "a list")))
+## demo
+#createRDA(clear = TRUE)
+#readRDA("test")
+#stopifnot(is.null(readRDA("test")))
+#writeRDA("test", 999)
+#stopifnot(identical(list(value = 999, comment = ""), readRDA("test")))
+#writeRDA("test", list(A = 1, B = 2), "a list")
+#stopifnot(identical(A, list(value = list(A = 1, B = 2), comment = "a list")))
 ```
