@@ -38,13 +38,13 @@ plane before sandpaper, and so on.
 debug <- FALSE
 dmsg <- function(...) if (debug) message(...)
 
-createRDA <- function(rdaName = "results.rda", empty = FALSE) {
-    if (empty || !file.exists(rdaName)) {
+createRDA <- function(rdaName = "results.rda", clear = TRUE) {
+    if (clear || !file.exists(rdaName)) {
         dmsg("creating RDA file \"", rdaName, "\"")
-        results <- list()
+        results <- list(name = NULL, value = NULL, comment = NULL)
         save(results, file = rdaName)
     } else {
-        warning("RDA file \"", rdaName, "\" already exists, so will not be recreated")
+        dmsg("RDA file \"", rdaName, "\" already exists, so will not be recreated")
     }
 }
 
@@ -55,24 +55,21 @@ readRDA <- function(name = NULL, rdaName = "results.rda") {
     get(load(rdaName))[[name]]
 }
 
-writeRDA <- function(name = NULL, value = NULL, replace = FALSE, rdaName = "results.rda") {
+writeRDA <- function(name = NULL, value = NULL, comment = "", rdaName = "results.rda") {
     if (!file.exists(rdaName)) {
         stop("RDA file \"", rdaName, "\" does not exist yet; use createRDA()")
     }
-    load(rdaName)
-    names <- names(results)
-    if (!replace && name %in% names(results)) {
-        stop("use replace=TRUE to replace an existing value")
-    }
-    results[[name]] <- value
+    load(rdaName) # defines 'results'
+    results[[name]] <- list(value = value, comment = comment)
     save(results, file = rdaName)
 }
 
 # demo
-createRDA(empty = TRUE)
-stopifnot(0 != length("test"))
-writeRDA("test", 999, replace = TRUE)
-stopifnot(999 == readRDA("test")) # expect 999
-writeRDA("test", list(A = 1, B = 2), replace = TRUE)
-stopifnot(identical(list(A = 1, B = 2), readRDA("test"))) # expect a list
+createRDA(clear = TRUE)
+readRDA("test")
+stopifnot(is.null(readRDA("test")))
+writeRDA("test", 999)
+stopifnot(identical(list(value = 999, comment = ""), readRDA("test")))
+writeRDA("test", list(A = 1, B = 2), "a list")
+stopifnot(identical(A, list(value = list(A = 1, B = 2), comment = "a list")))
 ```
