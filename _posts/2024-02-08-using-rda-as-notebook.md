@@ -13,7 +13,7 @@ data are large.
 
 When I get close to the paper-writing stage, though, I often want to pick out
 things that not just interconnecting data, but rather processed data. For
-example, I might do a `lm()` and then find the coefficients, the $p$ value,
+example, I might do a `lm()` and then find the coefficients, the p value,
 etc., perhaps rounded to the number of digits that I want for publication.  Or
 I might want to store the number of data in a particular category.  But the
 problem is that one of the many things I might want could be defined in one R
