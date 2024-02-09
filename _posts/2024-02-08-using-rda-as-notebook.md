@@ -33,6 +33,8 @@ you see below in an actual project, to see what "feels right", rather than
 planning it out in advance.  My approach is to use a saw before a plane, a
 plane before sandpaper, and so on.
 
+**UPDATE 2024-02-09.** I am going to make a package for this, to save having to copy the code from one spot to another, and doing `source()` in code that uses it. While I'm at it, I'll invent a scheme where you can specify which RDA file to use at the start of your script, and then don't need to name it in calls to e.g. `saveRda()`.  The natural name for the package seems to be `rdan`, for RDA-notebook (also for "arrh Dan", as a pirate might say.)
+
 ### Example
 
 Here's an example of why I made this. I like how I can insert comments in
