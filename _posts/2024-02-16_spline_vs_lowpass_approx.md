@@ -1,4 +1,4 @@
---
+---
 title: Comparison of Smoothing Spline with Lowpassed Linear Approximation
 author: Dan Kelley
 date: 2024-02-16
