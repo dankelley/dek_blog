@@ -4,40 +4,28 @@ author: Dan Kelley
 date: 2024-02-16
 ---
 
-Smoothing data is quite a common problem in oceanography.  If we can think of
-errors (or uncertainties -- you pick the word you like) as occurring just in
-the "y" variable, then I tend to tray two approaches: (1) fit a smoothing
-spline and (2) interpolate linearly onto a fixed grid, and then lowpass.
+Smoothing data is quite a common task in the analysis of oceanographic data. If
+we can think of errors (or uncertainties -- you pick the word you like) as
+occurring just in the "y" variable, then I tend to try two approaches: (1) fit
+a smoothing spline and (2) interpolate the data to a uniform grid and then
+apply a smoothing digital filter.
 
-The graph shows a typical result.  Note that the x spacing of the data is very
-non-uniform, with points separated greatly at the left of the graph, and packed
-together at the right of the graph. In such cases, smoothing splines can have
-problems.  You can see that in the blue curve, in the left half of the graph.
-The lowpassed linear approximation (red curve) does not have this problem, but
-it is perhaps overly linear between points.
+The graph shows a typical result.  It shows the co-dependence of two properties
+of seawater: density (on the x axis) and something called "spiciness" (on the y
+axis).  I am interested in locating spots on this graph where the slope is
+zero.
 
-If the goal were to look at the left side of the graph, altering the parameters
-(namely `deltaSigma` and `n` for the linear approximation, and `df` for the
-spline) could yield to results that might be more suitable, depending on the
-goal.
+I will let the graph and the code speak for themselves.  If you try this kind
+of thing on your own data, I think you'll find that you can get reasonably
+consistent results with the methods illustrate here, after adjusting
+parameters. Because there are no agreed-upon methods for selecting such
+parameters, I advise exploring with representative data, to find values that
+suit your goals, and to see how the results vary if those parmeters are
+adjusted across what is a reasonable range for the application of interest.
 
-But if the goal is to work on the right side of the graph, different settings
-might be used.  And, again, it depends on the goal.  In this particular case, I
-am interested in the x locations of spots where the curve has zero slope. By
-that measure, the two methods are producing similar results. An advantage of
-the smoothing spline is that it can output the derivative, saving the analyst
-from having to compute the derivative using a form of first difference
-(centred, perhaps).
+# Graph under discussion
 
-I am just scratching the surface of possible methods here, and definitely not
-suggesting which I think is best.  But I can suggest three points for
-discussion:
-1. The best method will depend on the goal of the analysis. (That's always
-   true, no matter the task or topic)
-2. It makes sense to trial different methods, with different parameters, on
-   real data.
-3. Combining methods can also make sense, e.g. using `approx()` to put the x
-   data on a uniform grid, and doing a `smooth.spline()` on the results
+![map-projections](/dek_blog/assets/images/2024-02-16_spline_vs_lowpass_approx.png)
 
 # Code
 
@@ -50,28 +38,37 @@ a <- read.oce(file)
 sig0 <- a[["sigma0"]]
 pi0 <- a[["spiciness0"]]
 png("2024-02-16_spline_vs_lowpass_approx.png", height = 7, width = 7, unit = "in", res = 200)
-par(mfrow = c(1, 1), mar = c(3.5, 3.5, 1, 1), mgp = c(2, 0.7, 0))
+par(mfrow = c(1, 1), mar = c(3.5, 3.5, 1, 1), mgp = c(2, 0.7, 0), lwd = 1.4)
 plot(sig0, pi0,
     xlab = resizableLabel("sigma0"),
     ylab = resizableLabel("spiciness0"),
     ylim = rev(range(pi0)),
-    pch = 20, cex = 0.8
+    cex = 0.8
 )
 deltaSigma <- 0.01
-n <- 11
-df <- 20
+n <- 9 # must be an odd number
+df <- length(sig0) / 3
 sig0out <- seq(min(sig0), max(sig0), deltaSigma)
 a <- approx(sig0, pi0, sig0out)
-lines(a$x, lowpass(a$y, n = n), col = 2)
-s <- smooth.spline(pi0 ~ sig0, df = df)
-ps <- predict(s, sig0out)
-lines(ps$x, ps$y, col = 4)
+lines(a$x, lowpass(a$y, n = n), col = 1, lwd = 2)
+s1 <- smooth.spline(pi0 ~ sig0, df = df)
+ps1 <- predict(s1, sig0out)
+lines(ps1$x, ps1$y, col = 2)
+s2 <- smooth.spline(a$y ~ a$x, df = df)
+ps2 <- predict(s2, sig0out)
+lines(ps2$x, ps2$y, col = 3)
+s3 <- smooth.spline(a$y ~ a$x, df = df * 2)
+ps3 <- predict(s3, sig0out)
+lines(ps3$x, ps3$y, col = 4)
+
 grid()
 legend("bottomleft",
-    lwd = 1, col = c(2, 4), bg = "white",
+    lwd = 1, col = 1:4, bg = "white",
     legend = c(
-        sprintf("lowpass(approx(), n=%d) with delta-sigma=%.3f", n, deltaSigma),
-        sprintf("smooth.spline(df=%d)", df)
+        "lowpass",
+        "smoothing spline on raw data",
+        "smoothing spline on gridded data",
+        "smoothing spline on gridded data (df doubled)"
     )
 )
 ```
