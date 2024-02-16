@@ -8,7 +8,8 @@ macOS machine.
 
 Do this by e.g.
 ```
-cp a ~/git/skills-github-pages/_posts/a.md and then edit
+cd ~/git/dek_blog/_posts
+cp ~/git/dankelley.github.io/_posts/2014-11-10-solar-navigation.md .
 ```
 
 But, wait, there's more!  Must next:
@@ -28,9 +29,10 @@ saliency.
 * 2016-02-09-noreaster
 * 2015-10-18-shiny-ctd-trim
 * 2015-08-25-email-graphs
-* 2014-03-16-box-model
 * 2013-12-28-sundial
 * 2013-12-21-solstice
+* 2014-11-10-solar-navigation
+* 2014-03-16-box-model
 
 # Items not yet transferred from the old blog
 
@@ -73,5 +75,4 @@ saliency.
 * 2014-06-15-nonlinear-oscillator
 * 2014-06-22-gulf-stream-center
 * 2014-07-01-landsat
-* 2014-11-10-solar-navigation
 
