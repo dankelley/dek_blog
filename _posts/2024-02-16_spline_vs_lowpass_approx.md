@@ -43,7 +43,7 @@ discussion:
 
 This code requires a data file (line 2) that is not provided on this blog posting.
 
-```{r echo = FALSE}
+```R
 library(oce)
 file <- "~/data/argo/D4901076_061.nc"
 a <- read.oce(file)
