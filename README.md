@@ -21,14 +21,14 @@ But, wait, there's more!  Must next:
 
 # Items already transferred from the old blog
 
-I am not transferring items in time sequence, working instead by
-saliency.
+The following items have been transferred so far.
 
 * 2022-02-16-vim-julia
 * 2020-09-30-dislike-ggplot
 * 2016-02-09-noreaster
 * 2015-10-18-shiny-ctd-trim
 * 2015-08-25-email-graphs
+* 2014-07-01-landsat
 * 2013-12-28-sundial
 * 2013-12-21-solstice
 * 2014-11-10-solar-navigation
@@ -74,5 +74,4 @@ saliency.
 * 2014-06-08-slumping-model
 * 2014-06-15-nonlinear-oscillator
 * 2014-06-22-gulf-stream-center
-* 2014-07-01-landsat
 
