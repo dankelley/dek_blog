@@ -19,9 +19,7 @@ But, wait, there's more!  Must next:
 3. insert links to images
 4. copy images to `assets/images`
 
-# Items already transferred from the old blog
-
-The following items have been transferred so far.
+# Items that have been transferred from the old blog
 
 * 2022-02-16-vim-julia
 * 2020-09-30-dislike-ggplot
@@ -33,6 +31,7 @@ The following items have been transferred so far.
 * 2013-12-21-solstice
 * 2014-11-10-solar-navigation
 * 2014-03-16-box-model
+* 2014-01-15-colourizing-along-a-trajectory
 
 # Items not yet transferred from the old blog
 
@@ -57,7 +56,6 @@ The following items have been transferred so far.
 * 2015-05-10-ITS90-temperature-scale
 * 2015-08-22-woa-2013-2
 * 2015-11-07-giss
-* 2014-01-15-colourizing-along-a-trajectory
 * 2014-01-30-gmt-colors-topography
 * 2014-02-08-hodograph
 * 2014-02-10-oce-map-projection
