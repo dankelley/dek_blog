@@ -1,17 +1,19 @@
 This repository holds the source code for a new (late 2023) attempt at a blog
 (at https://dankelley.github.io/dek_blog/), which I hope to serve as a
 replacement from an old blog (http://dankelley.github.io/blog/) that has become
-difficult to maintain, owing to difficulties with instally Ruby gems on a macOS
-machine.
+difficult to maintain, owing to difficulties with installing Ruby gems on a
+macOS machine.
 
-# How transferal is done
+# How transferral is done
 
 Do this by e.g.
 ```
 cp a ~/git/skills-github-pages/_posts/a.md and then edit
 ```
+
 But, wait, there's more!  Must next:
-1. edit the `.md` file to remove specialized yaml, like keywords/tags, category, summary, etc.
+1. edit the `.md` file to remove specialized yaml, like keywords/tags,
+   category, summary, etc.
 2. put the date in new format
 3. insert links to images
 4. copy images to `assets/images`
