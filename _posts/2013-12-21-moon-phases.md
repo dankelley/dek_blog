@@ -9,6 +9,8 @@ the oce package, as illustrated graphically and in R code below.
 
 ![moon phase diagram](/dek_blog/docs/assets/images/2013-12-21-moon-phases.png)
 
+# Code
+
 ```R
 library(oce)
 if (!interactive()) png("2013-12-21-moon-phases.png")

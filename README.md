@@ -31,6 +31,7 @@ But, wait, there's more!  Must next:
 * 2013-12-21-solstice
 * 2014-11-10-solar-navigation
 * 2014-03-16-box-model
+* 2014-02-13-valentine-moon
 * 2014-01-15-colourizing-along-a-trajectory
 * 2013-12-30-installing-oce
 * 2013-12-21-day-length
@@ -62,7 +63,6 @@ But, wait, there's more!  Must next:
 * 2014-02-08-hodograph
 * 2014-02-10-oce-map-projection
 * 2014-02-11-oce_runlm
-* 2014-02-13-valentine-moon
 * 2014-02-17-demodulation
 * 2014-02-19-filtfilt
 * 2014-03-05-error-bars-in-r
