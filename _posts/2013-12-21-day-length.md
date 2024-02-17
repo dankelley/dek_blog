@@ -1,6 +1,6 @@
 ---
 title: Day length calculation
-time: 2013-12-21
+date: 2013-12-21
 author: Dan Kelley
 ---
 
@@ -24,7 +24,7 @@ Halifax, but in other timezones other offsets would be needed.  Interested
 readers might want to devised a method based on the longitude, which can be
 transformed into a timezone.
 
-![daylength graph]({{ site.url }}/assets/daylength.png)
+![daylength](/dek_blog/docs/assets/images/2013-12-21-day-length.png)
 
 # Code
 
