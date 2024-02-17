@@ -103,12 +103,15 @@ div.post_title {
     font-weight:400;
     color:black;
     line-height:100%;
-    margin-left: 1em;
-    margin-top: 0ex;
-    margin-bottom: 0ex;
+    margin-left:1em;
+    margin-top:0ex;
+    margin-bottom:0ex;
 }
 div.post_link {
-    font-size: 14px;
+    font-size:14px;
+}
+div.post_header {
+    margin-bottom:0px;
 }
 
 span.post_tags, span.post_date, span.post_summary {
