@@ -33,5 +33,6 @@ only updated every few months, but the branch named `develop` (used above) may
 be updated several times a day, if the author is adding new features or fixing
 bugs.
 
-For more on oce, see the [oce website on
-github](http://www.github.com/dankelley/oce).
+For more on oce, see the [oce development
+site](http://www.github.com/dankelley/oce) and the [online
+manual for the package](https://dankelley.github.io/oce/).
