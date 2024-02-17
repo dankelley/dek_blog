@@ -134,7 +134,7 @@ h3 {
     font-style: italic;
     line-height:100%;
     margin-left: 0.5em;
-    margin-top: 0.5em;
+    margin-top: 0em;
     margin-bottom: 0em;
 }
 
@@ -248,6 +248,7 @@ p.footnote {
 /* posts */
 ul.posts {
     list-style-type: none;
+    margin-top: 0em;
     margin-bottom: 0em;
     margin-left: -25px;
 }
