@@ -32,6 +32,8 @@ But, wait, there's more!  Must next:
 * 2014-11-10-solar-navigation
 * 2014-03-16-box-model
 * 2014-01-15-colourizing-along-a-trajectory
+* 2013-12-30-installing-oce
+* 2013-12-21-day-length
 
 # Items not yet transferred from the old blog
 
@@ -72,4 +74,3 @@ But, wait, there's more!  Must next:
 * 2014-06-08-slumping-model
 * 2014-06-15-nonlinear-oscillator
 * 2014-06-22-gulf-stream-center
-
