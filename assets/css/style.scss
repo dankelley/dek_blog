@@ -1,0 +1,12 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight {
+    margin:0 0 0 0;
+}
+body {
+    color: red;
+    margin:0 0 0 0;
+}
