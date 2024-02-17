@@ -32,7 +32,7 @@ body {
     font-size:14px;
     color: #444444;
     background-color: #eee;
-    line-height: 2.5ex;
+    line-height: 1.0ex;
     margin:0;
     margin-top:0;
     padding-top:0;
@@ -98,8 +98,8 @@ div.slug {
     margin-bottom:0ex;
 }
 div.post_title {
-    font-size:160%;
-    line-height:110%;
+    font-size:120%;
+    line-height:100%;
     font-weight:400;
     color:black;
     line-height:140%;
@@ -114,16 +114,16 @@ span.post_tags, span.post_date, span.post_summary {
 }
 
 h1 {
-    font-size:140%;
+    font-size:120%;
     font-weight:400;
-    line-height:140%;
+    line-height:120%;
     margin-top: 0px;
     margin-bottom: 0.2ex;
 }
 
 h2 {
     font-size:100%;
-    line-height:110%;
+    line-height:100%;
     margin-top: 0.5em;
     margin-bottom: 0.2em;
 }
