@@ -16,10 +16,15 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight {
 }
 
 .post-meta {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .post-link {
     font-size: 14px;
     color: #5574ca; /* blue */
+}
+
+.post-list {
+    list-style: none;
+    margin-left: 20px;
 }
