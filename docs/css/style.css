@@ -257,6 +257,7 @@ ul.posts {
 ul.posts li {
     line-height: 1.0em;
     margin-left: 0em;
+    margin-bottom: 0em;
 }
 
 ul.posts span {
