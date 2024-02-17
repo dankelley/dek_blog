@@ -7,7 +7,7 @@ date: 2013-12-21
 The illuminated fraction of the moon can be calculated with `moonAngle()` in
 the oce package, as illustrated graphically and in R code below.
 
-![moon phase diagram](/dek_blog/docs/assets/images/2013-12-moon-phases.png)
+![moon phase diagram](/dek_blog/docs/assets/images/2013-12-21-moon-phases.png)
 
 ```R
 library(oce)
