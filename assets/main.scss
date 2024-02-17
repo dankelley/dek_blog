@@ -3,19 +3,19 @@
 
 @import "minima";
 
-h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight {
-    margin:0 0 0 0;
-    color: pink;
-    background: green;
-}
 body {
     color: red;
-    background: pink;
+    background: #f0f0f0;
     margin:0 0 0 0;
 }
 
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight {
+    margin:0 0 0 0;
+    color: #5574ac; /* blue */
+}
+
 .post-meta {
-    font-size: 60px;
+    font-size: 14px;
 }
 
 .post-link {

@@ -4,19 +4,6 @@ replacement from an old blog (http://dankelley.github.io/blog/) that has become
 difficult to maintain, owing to difficulties with installing Ruby gems on a
 macOS machine.
 
-# Work in progress
-
-I cannot figure out how to alter the layout.  I've messed with a lot of css
-things but cannot even find where to put a `style.css` file.  Or is it to be a
-`style.scss` file? The web is not a lot of help because I see multiple places
-and so I suspect jekyll has changed. I cannot test locally because I cannot
-install the jekyll gem (it wants more permissions but it fails even if I use
-`sudo`).  I tried running things in `docker` but copying the code on the github
-action doesn't help because it seems to assume linux directory setup.
-
-You'd think github would have at least a page stating the required directory
-structure, but no such luck.
-
 # How transferral is done
 
 Do this by e.g.
@@ -87,3 +74,9 @@ But, wait, there's more!  Must next:
 * 2014-06-08-slumping-model
 * 2014-06-15-nonlinear-oscillator
 * 2014-06-22-gulf-stream-center
+
+# Diary of Work Progress
+
+1. It took me ages to determine where and how to alter the css.  The answer is to
+put the code into `assets/main.scss`; see that file for more.
+
