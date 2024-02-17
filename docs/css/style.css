@@ -261,12 +261,16 @@ ul.posts li {
     line-height: 1.0em;
     margin-left: 0em;
     margin-bottom: 0em;
+    margin-top: 0em;
+    font-size: 14px;
 }
 
 ul.posts span {
     color: #aaa;
     font-family: Monaco, "Courier New", monospace;
     font-size: 80%;
+    margin-top: 0;
+    margin-bottom: 0;
     margin-left: 0;
 }
 
