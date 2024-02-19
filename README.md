@@ -33,50 +33,12 @@ But, wait, there's more!  Must next:
 * 2014-03-16-box-model
 * 2014-02-13-valentine-moon
 * 2014-01-15-colourizing-along-a-trajectory
+* 2014-01-11-inferring-halocline-depth
 * 2013-12-30-installing-oce
 * 2013-12-21-day-length
 
-# Items not yet transferred from the old blog
-
-* 2020-01-04-oce-proj
-* 2020-01-16-map-projection
-* 2020-01-31-pandoc-epub
-* 2020-03-03-oce-update-magneticField
-* 2020-08-02-map-projection
-* 2020-08-02-oce-proj
-* 2019-12-15-new-R-palette
-* 2018-10-06-oce-1.0-published
-* 2017-12-21-spectrum-length
-* 2016-02-20-landsat-hue
-* 2016-02-21-landsat-hue-2
-* 2016-02-22-landsat-hue-3
-* 2016-04-10-flags
-* 2016-06-11-unit-expressions
-* 2016-11-10-election-usa-2016
-* 2015-03-20-eclipse
-* 2015-03-22-scinot
-* 2015-04-03-oce-proj
-* 2015-05-10-ITS90-temperature-scale
-* 2015-08-22-woa-2013-2
-* 2015-11-07-giss
-* 2014-01-30-gmt-colors-topography
-* 2014-02-08-hodograph
-* 2014-02-10-oce-map-projection
-* 2014-02-11-oce_runlm
-* 2014-02-17-demodulation
-* 2014-02-19-filtfilt
-* 2014-03-05-error-bars-in-r
-* 2014-03-12-digitizing-plots
-* 2014-03-22-sun-moon
-* 2014-04-12-memoise
-* 2014-04-30-colormap
-* 2014-06-08-Rcpp
-* 2014-06-08-slumping-model
-* 2014-06-15-nonlinear-oscillator
-* 2014-06-22-gulf-stream-center
-
 # Diary of Work Progress
 
-1. It took me ages to determine where and how to alter the css.  The answer is to
-put the code into `assets/main.scss`; see that file for more.
+1. It took me ages to determine where and how to alter the css.  The answer is
+   to put the code into `assets/main.scss`; see that file for more.
 
