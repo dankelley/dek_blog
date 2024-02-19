@@ -18,15 +18,13 @@ derivative with a smoothing spline.
 
 # Methods
 
-Pasted below is test code that does this with the ctd dataset in the oce
-package. The function returns the pressure at which the smoothing spline has
-highest salinity derivative, and it can also plot the results (which is
-recommended). The parameter named deltap is used to set the value of `df`
-(degrees of freedom) for the spline. One might think of deltap as the thickness
-(in dbar) of the smoothing interval for each of the sub-components of the
-spline.
+The code pasted below does this with the ctd dataset in the oce package. The
+function returns the pressure at which the smoothing spline has highest
+salinity derivative, and it can also plot the results (which is recommended).
+The parameter named deltap is used to set the value of `df` (degrees of
+freedom) for the spline. One might think of deltap as the thickness (in dbar)
+of the smoothing interval for each of the sub-components of the spline.
 
-Code: <details>
 ```R
 library(oce)
 findHalocline <- function(ctd, deltap = 5, plot = TRUE) {
@@ -50,7 +48,7 @@ findHalocline <- function(ctd, deltap = 5, plot = TRUE) {
             side = 1, line = -1, adj = 0, cex = 3 / 4
         )
     }
-    return(H)
+    H
 }
 # Plot two panels to see influence of deltap.
 par(mfrow = c(1, 2))

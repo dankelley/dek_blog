@@ -21,7 +21,7 @@ findHalocline <- function(ctd, deltap = 5, plot = TRUE) {
             side = 1, line = -1, adj = 0, cex = 3 / 4
         )
     }
-    return(H)
+    H
 }
 # Plot two panels to see influence of deltap.
 par(mfrow = c(1, 2))
