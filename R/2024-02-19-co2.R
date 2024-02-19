@@ -1,6 +1,6 @@
 png("2024-02-19-co2.png", unit = "in", width = 7, height = 4, res = 200)
 
-par(mar = c(2, 3, 1, 1), mgp = c(2, 0.7, 0))
+par(mar = c(3, 3.5, 1, 1), mgp = c(2, 0.7, 0))
 # Compare built-in co2 dataset with a new dataset
 data(co2)
 old <- data.frame(year = as.numeric(time(co2)), co2 = as.vector(co2))
@@ -22,7 +22,8 @@ xlim <- range(c(old$year, new$year))
 ylim <- range(c(old$co2, new$co2), na.rm = TRUE)
 plot(old$year, old$co2,
     xlim = xlim, ylim = ylim, col = 4, type = "l", lwd = 2,
-    xlab = expression(CO[2] * " [ppm]")
+    xlab = "Year",
+    ylab = expression(CO[2] * " [ppm]")
 )
 lines(new$year, new$co2, col = 2)
 grid()
