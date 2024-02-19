@@ -1,7 +1,7 @@
 ---
-title: Inferring halocline depth
-date: 2014-01-11
 author: Dan Kelley
+date: 2014-01-11
+title: Inferring Halocline Depth
 ---
 
 # Introduction
@@ -63,7 +63,7 @@ findHalocline(ctd, 1)
 The graph shows results for a test dataset provided with the oce package, using
 two values for `deltap`.
 
-![graph of halocline depth](/dek_blog/docs/assets/figures/2014-01-11-inferring-halocline-depth.png)
+![graph of halocline depth](/dek_blog/docs/assets/images/2014-01-11-inferring-halocline-depth.png)
 
 # Discussion
 
