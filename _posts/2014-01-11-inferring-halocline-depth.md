@@ -26,6 +26,7 @@ recommended). The parameter named deltap is used to set the value of `df`
 (in dbar) of the smoothing interval for each of the sub-components of the
 spline.
 
+Code: <details>
 ```R
 library(oce)
 findHalocline <- function(ctd, deltap = 5, plot = TRUE) {
@@ -56,6 +57,7 @@ par(mfrow = c(1, 2))
 data(ctd)
 findHalocline(ctd)
 findHalocline(ctd, 1)
+```
 
 # Results
 
