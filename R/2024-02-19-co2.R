@@ -1,4 +1,4 @@
-# png("2024-02-19-co2.png", unit = "in", width = 7, height = 4, res = 200)
+png("2024-02-19-co2.png", unit = "in", width = 7, height = 4, res = 200)
 
 par(mar = c(2, 3, 1, 1), mgp = c(2, 0.7, 0))
 # Compare built-in co2 dataset with a new dataset
