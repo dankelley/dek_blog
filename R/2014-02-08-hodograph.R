@@ -1,4 +1,4 @@
-png("2014-02-08-hodograph_%d.png", unit = "in", width = 7, height = 6, res = 200)
+png("2014-02-08-hodograph-%d.png", unit = "in", width = 7, height = 6, res = 200)
 hodograph <- function(x, y, t, rings, ringlabels = TRUE, tcut = c("daily", "yearly"), ...) {
     tcut <- match.arg(tcut)
     if (missing(t)) {

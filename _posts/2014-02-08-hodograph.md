@@ -108,6 +108,6 @@ Comparing the hodograph with the more conventional time-series plot can be
 quite informative. Both have strengths, depending on the purpose
 and the viewer.
 
-![hodograph of co2 signal](/dek_blog/docs/assets/images/2014-02-08-hodograph1.png) 
+![hodograph of co2 signal](/dek_blog/docs/assets/images/2014-02-08-hodograph-1.png) 
 
-![timeseries of co2 signal](/dek_blog/docs/assets/images/2014-02-08-hodograph2.png) 
+![timeseries of co2 signal](/dek_blog/docs/assets/images/2014-02-08-hodograph-2.png) 
