@@ -24,7 +24,6 @@ ok <- year >= 1960
 year <- year[ok]
 co2 <- co2[ok]
 
-# png("new-co2-%d.png", unit = "in", width = 7, height = 6, res = 200)
 hodograph <- function(x, t, rings, ringlabels = FALSE, axes = FALSE, highlight = NULL, ...) {
     t <- as.POSIXlt(t)
     start <- ISOdatetime(1900 + as.POSIXlt(t[1])$year, 1, 1, 0, 0, 0,
@@ -85,7 +84,7 @@ par(mar = rep(3, 4))
 co2start <- head(co2, 1)
 hodograph(
     x = co2 - co2start, t = t, rings = seq(0, 100, 10), col = 4,
-    #highlight = c(1974, 1993, 1998)
+    # highlight = c(1974, 1993, 1998)
     highlight = seq(1960, 2024, 10)
 )
 label <- sprintf(

@@ -1,7 +1,7 @@
 ---
 author: Dan Kelley
-date: 2014-02-08
-title: Hodograph Drawing
+date: 2020-02-20
+title: Hodograph of Updated CO2 Dataset
 ---
 
 # Introduction
@@ -14,10 +14,10 @@ addition of red lines that denote the starts of the decades.
 
 # References
 
-1. Previous posting using R built-in `co2` dataset
+1. Decade-old posting about making a hodography with the built-in `co2` dataset
 [2014-02-08](https://dankelley.github.io/dek_blog/2014/02/08/hodograph.html)
 
-2. Previous posting about the up-to-date CO2 dataset
+2. Posting yesterday about the up-to-date CO2 dataset
 [2024-02-19](https://dankelley.github.io/dek_blog/2024/02/19/co2.html)
 
 # Appendix: R code
@@ -49,7 +49,7 @@ ok <- year >= 1960
 year <- year[ok]
 co2 <- co2[ok]
 
-# png("new-co2-%d.png", unit = "in", width = 7, height = 6, res = 200)
+png("new-co2-%d.png", unit = "in", width = 7, height = 6, res = 200)
 hodograph <- function(x, t, rings, ringlabels = FALSE, axes = FALSE, highlight = NULL, ...) {
     t <- as.POSIXlt(t)
     start <- ISOdatetime(1900 + as.POSIXlt(t[1])$year, 1, 1, 0, 0, 0,
