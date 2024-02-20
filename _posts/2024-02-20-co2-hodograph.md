@@ -10,6 +10,18 @@ This builds on a previous blog post (reference 1) and uses up-to-date CO2 data
 (reference 2), plus some changes to the plot, e.g removal of the grid lines and
 addition of red lines that denote the starts of the decades.
 
+# Results
+
+The diagram below show the increasing CO2 signal over the past 64 years. The
+distance from the centre is proportional to the increase from the initial
+atmospheric CO2 concentration in value in 1960. The line segments join the
+monthly values of the dataset. Red lines are used to indicate the first year of
+each decade.
+
+The general outward spiraling results from an overall trend of increasing CO2
+concentration over time.  Interannual variability can can also be seen here, as
+a variation in the spacing of the "rings" of the spiral.
+
 ![hodograph of co2 signal](/dek_blog/docs/assets/images/2024-02-20-co2-hodograph.png) 
 
 # References
