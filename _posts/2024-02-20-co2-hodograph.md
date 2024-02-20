@@ -14,11 +14,14 @@ addition of red lines that denote the starts of the decades.
 
 # References
 
-1. Decade-old posting about making a hodography with the built-in `co2` dataset
-[2014-02-08](https://dankelley.github.io/dek_blog/2014/02/08/hodograph.html)
+1. Posting on
+   [2014-02-08](https://dankelley.github.io/dek_blog/2014/02/08/hodograph.html)
+   about making a hodography with the built-in `co2` dataset.
 
-2. Posting yesterday about the up-to-date CO2 dataset
-[2024-02-19](https://dankelley.github.io/dek_blog/2024/02/19/co2.html)
+2. Posting on
+   [2024-02-19](https://dankelley.github.io/dek_blog/2024/02/19/co2.html) about
+   the up-to-date CO2 dataset, and its comparison with R's built-in `co2`
+   dataset, during the time when they overlap.
 
 # Appendix: R code
 
