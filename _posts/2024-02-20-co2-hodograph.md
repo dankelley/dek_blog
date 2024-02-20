@@ -10,7 +10,7 @@ This builds on a previous blog post (reference 1) and uses up-to-date CO2 data
 (reference 2), plus some changes to the plot, e.g removal of the grid lines and
 addition of red lines that denote the starts of the decades.
 
-![hodograph of co2 signal](/dek_blog/docs/assets/images/2024-02-20-hodograph-co2.png) 
+![hodograph of co2 signal](/dek_blog/docs/assets/images/2024-02-20-co2-hodograph.png) 
 
 # References
 
