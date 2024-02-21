@@ -2,6 +2,7 @@
 title: Day length calculation
 date: 2013-12-21
 author: Dan Kelley
+tags: astronomy
 ---
 
 The winter solstice has been on many minds lately.  The days are about to start

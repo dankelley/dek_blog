@@ -2,6 +2,7 @@
 title: Moon phase calculation
 author: Dan Kelley
 date: 2013-12-21
+tags: astronomy
 ---
 
 The illuminated fraction of the moon can be calculated with `moonAngle()` in
