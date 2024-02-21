@@ -1,11 +1,9 @@
-pdf("halifax.pdf")
-# tofficial <- as.POSIXct("2024-04-08 19:38:02", tz = "UTC") # mid-eclipse
-tofficial <- as.POSIXct("2024-04-08 18:27:21", tz = "UTC") # C1
-LAT <- 44.64533
-LON <- -63.57239
-
+pdf("nazas.pdf")
 library(oce)
-# 44.6476° N, 63.5728° W
+tofficial <- as.POSIXct("2024-04-08 18:15:02", tz = "UTC")
+LON <- -104.113201
+LAT <- 25.22331
+
 S <- \(x) sinpi(x / 180)
 C <- \(x) cospi(x / 180)
 angle <- function(t, longitude = LON, latitude = LAT) {
@@ -15,6 +13,9 @@ angle <- function(t, longitude = LON, latitude = LAT) {
     sal <- sa$altitude
     maz <- ma$azimuth
     mal <- ma$altitude
+    # OLD: approx that doesn't cost so many trig calls
+    # scale <- cos(0.5 * (ma$altitude + sa$altitude) * pi / 180)
+    # sqrt((scale * (saz - maz))^2 + (sal - mal)^2)
     # Next is from law of cosines.
     180 / pi * acos(S(mal) * S(sal) + C(mal) * C(sal) * C(maz - saz))
 }
@@ -22,7 +23,7 @@ angle <- function(t, longitude = LON, latitude = LAT) {
 times <- tofficial + seq(-1800, 1800, 30)
 misfit <- sapply(times, angle)
 oce.plot.ts(times, misfit, ylim=c(0.34, 0.5),
-    ylab = "Sun-Moon Angular Misfit [deg)",
+    ylab = "Nazas Sun-Moon Angular Misfit [deg]",
     type = "o", pch = 20, grid = TRUE,
     drawTimeRange = FALSE
 )
@@ -38,3 +39,4 @@ mtext(format(tbest, "%Y-%m-%d %H:%M UTC"), at = tbest)
 abline(v = tofficial, col = "red")
 mtext(sprintf("Here: %s ", format(tbest, tz = "UTC")), line = -1, adj = 1, col = "black")
 mtext(sprintf("NASA: %s ", format(tofficial, tz = "UTC")), line = -2, adj = 1, col = "red")
+dev.off()
