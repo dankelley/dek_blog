@@ -1,5 +1,5 @@
 ---
-title: Map Projections
+title: Comparing Albers Equal Area and Lambert Conic Conformal Map Projections
 date: 2024-02-07
 output: pdf_document
 ---
