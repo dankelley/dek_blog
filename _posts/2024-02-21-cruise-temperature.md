@@ -5,8 +5,8 @@ title: Ocean Temperatures for a Panama Cruise
 ---
 
 A friend is planning a cruise to the Panama region in the next few weeks. Let's
-see what the water temperature might be, based on today's temperature. Hm,
-waters near Panama is a bit warmer than those near Nova Scotia!
+see what the water temperature might be, based on today's temperature. Hm, the
+waters near Panama are a wee bit warmer than those near Nova Scotia!
 
 ![panama](/dek_blog/docs/assets/images/2024-02-21-cruise-temperature-1.png)
 
