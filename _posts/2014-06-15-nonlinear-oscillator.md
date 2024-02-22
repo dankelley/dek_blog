@@ -8,7 +8,7 @@ The function `lsoda()` from the `deSolve` package is a handy function for
 solving differential equations in R. This is illustrated here with a classic
 example: the nonlinear oscillator.
 
-As explained in any introductory Physics textbook, the nonlinear oscillator
+As explained in introductory Physics textbooks, the nonlinear oscillator
 equation
 *d*θ<sup>*2*</sup>/*dt*<sup>2</sup> + sin *θ* = 0
 can be simplified to a linear form
@@ -24,7 +24,11 @@ numerical solution, using the `lsoda()` function provided by the `deSolve`
 package.
 
 The first step is to break the second-order DE down into two first-order DEs:
-*ϕ* = *dθ/dt* and *dϕ/dt* =  −*sin θ*.
+*ϕ* = *dθ/dt* and *dϕ/dt* =  −*sin θ*.  So, let's give that a try.  The method
+used in `lsoda()` is for the user to create a function that has arguments for
+time, `t`, solution initial conditions, `y`, and a list of mathematical
+parameters called `parms`.  With that information in hand, readers who
+know R will likely be able to understand the following code.
 
 ```R
 library(deSolve)
@@ -49,10 +53,9 @@ lines(t, a*sin(t), col='red', lty='dashed')
 
 ![](/dek_blog/docs/assets/images/2014-06-15-nonlinear-oscillator_files/unnamed-chunk-1-1.png)
 
-# Some test cases
-
-For more exploration, it is convenient to define the above as a
-stand-alone function that takes `a` as a parameter.
+Notice that in this case, with *a=0.1*, the linear and nonlinear solutions
+coincide.  What about higher values, though? To see, it might help to rewrite
+the code a bit, as follows
 
 ```R
 library(deSolve)
@@ -79,9 +82,7 @@ oscillator <- function(a=0.1)
 }
 ```
 
-Now, a few examples are easy to construct.
-
-Start with a somewhat nonlinear problem
+Here's a somewhat linear situation.
 
 ```R
 oscillator(1)
@@ -89,8 +90,7 @@ oscillator(1)
 
 ![](/dek_blog/docs/assets/images/2014-06-15-nonlinear-oscillator_files/unnamed-chunk-3-1.png)
 
-Readers should try increasing $a$ a bit at a time, e.g. the example below has a
-distinctly non-sinusoidal character.
+Here is a much more nonlinear situation, with *a=1.999*.
 
 ```R
 oscillator(1.999)
@@ -98,8 +98,7 @@ oscillator(1.999)
 
 ![](/dek_blog/docs/assets/images/2014-06-15-nonlinear-oscillator_files/unnamed-chunk-4-1.png)
 
-# Exercises
-
-Further explore the behaviour in the neighborhood of *a=2*. Are changes
-subtle or dramatic in that region? Are there other regions of interest? Consult
-the literature if this problem interests you.
+I'll leave it to readers to try some other tests in the neighbourhood of *a=2*.
+Are the results subtle or dramatic in that region? Are there other regions of
+interest? If you find these questions of interest, you might want to consult
+the literature.
