@@ -82,7 +82,8 @@ oscillator <- function(a=0.1)
 }
 ```
 
-Here's a somewhat linear situation.
+Here's a somewhat nonlinear situation.  Notice that the system
+still oscillates, albeit with high amplitude and longer period. 
 
 ```R
 oscillator(1)
@@ -90,10 +91,11 @@ oscillator(1)
 
 ![](/dek_blog/docs/assets/images/2014-06-15-nonlinear-oscillator_files/unnamed-chunk-3-1.png)
 
-Here is a much more nonlinear situation, with *a=1.999*.  Hm, this has quite a
-different character, doesn't it?  It is still repeating, but with what seems to
-be about a factor of 2 increase in period.  And it no longer looks sinusoidal,
-with these broad peaks and valleys.
+Now, let's try a much more nonlinear situation, with *a=1.999*.  As the
+following shows this system has quite a different character. Yes, it is still
+repeating, so it has not lost that behaviour.  But the period has approximately
+doubled, and the peaks and valleys are now distinctly flatter than for a
+sinusoidal system.
 
 ```R
 oscillator(1.999)
@@ -101,7 +103,11 @@ oscillator(1.999)
 
 ![](/dek_blog/docs/assets/images/2014-06-15-nonlinear-oscillator_files/unnamed-chunk-4-1.png)
 
-If this interests you, I advise you to explore a bit more the regions near
-*a=1* and *a=2*.  Then try some larger values, to see how the qualitative
-nature of the solution changes. Perhaps, motivated by such exercises, you might
-decide to read more widely about such dynamical systems.
+What about for higher *a* values?  I think I'll leave that to readers.  You
+have a simple experimental tool here, that you can use to explore the dynamics.
+The only parameter here is the value of *a*, so perhaps try some experiments
+with a range of *a* values, to see whether changes are slow across the board,
+or whether there might be some values of *a* at which large changes occur. Of
+course, you could search the web for answers to such questions, but where's the
+fun in that, when you have a tool that will let you discover things for
+yourself?
