@@ -4,41 +4,27 @@ date: 2014-06-15
 title: DE solution in R (nonlinear oscillator)
 ---
 
-# Introduction
-
 The function `lsoda()` from the `deSolve` package is a handy function for
 solving differential equations in R. This is illustrated here with a classic
 example: the nonlinear oscillator.
 
-# Theory
-
 As explained in any introductory Physics textbook, the nonlinear oscillator
 equation
-
-*d*<sup>*2*</sup>/*d**t*<sup>2</sup> + sin *θ* = 0
-
+*d*θ<sup>*2*</sup>/*dt*<sup>2</sup> + sin *θ* = 0
 can be simplified to a linear form
-
-*d*<sup>2</sup>*θ*/*d**t*<sup>2</sup> + *θ* = 0
-
+*d*<sup>2</sup>*θ*/*dt*<sup>2</sup> + *θ* = 0
 provided that *θ* ≪ 1.
 
-It is a simple matter to show that this linear form has solution
-
-*θ* = *a*sin (*t*)
-
-given initial conditions *θ* = 0 and *d**θ*/*d**t* = *a* at time *t*0$.
+It is a simple matter to show that the linear form has solution
+*θ* = *a*sin (*t*),
+given initial conditions *θ* = 0 and *dθ*/*dt* = *a* at time *t=0*.
 
 Although the nonlinear form is harder to solve analytically, it is amenable to
-numerical solution.
-
-# Numerical Solution in R
-
-The `lsoda()` function provided by the `deSolve` package can be used to
-integrate the nonlinear DE with or without without the small angle assumption.
+numerical solution, using the `lsoda()` function provided by the `deSolve`
+package.
 
 The first step is to break the second-order DE down into two first-order DEs:
-*ϕ* = *d**θ*/*d**t* and *d**ϕ*/*d**t* =  − sin *θ*.
+*ϕ* = *dθ/dt* and *dϕ/dt* =  −*sin θ*.
 
 ```R
 library(deSolve)
