@@ -102,6 +102,6 @@ oscillator(1.999)
 ![](/dek_blog/docs/assets/images/2014-06-15-nonlinear-oscillator_files/unnamed-chunk-4-1.png)
 
 If this interests you, I advise you to explore a bit more the regions near
-*a=1* and *a=2.  Then try some larger values, to see how the qualitative nature
-of the solution changes. Perhaps, motivated by such exercises, you might decide
-to read more widely about such dynamical systems.
+*a=1* and *a=2*.  Then try some larger values, to see how the qualitative
+nature of the solution changes. Perhaps, motivated by such exercises, you might
+decide to read more widely about such dynamical systems.
