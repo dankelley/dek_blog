@@ -14,23 +14,20 @@ example: the nonlinear oscillator.
 
 As explained in any introductory Physics textbook, the nonlinear oscillator
 equation
-$$
-d^2\theta/dt^2 + \sin\theta = 0
-$$
-can be simplified to a linear form
-$$
-d^2\theta/dt^2  + \theta = 0
-$$
 
-provided that $\theta \ll 1$, since $\sin\theta \rightarrow \theta$ in that
-limit.
+*d*<sup>*2*</sup>/*d**t*<sup>2</sup> + sin *θ* = 0
+
+can be simplified to a linear form
+
+*d*<sup>2</sup>*θ*/*d**t*<sup>2</sup> + *θ* = 0
+
+provided that *θ* ≪ 1.
 
 It is a simple matter to show that this linear form has solution
-$$
-\theta = a\sin(t)
-$$
 
-given initial conditions $\theta=0$ and $d\theta/dt=a$ at time $t=0$.
+*θ* = *a*sin (*t*)
+
+given initial conditions *θ* = 0 and *d**θ*/*d**t* = *a* at time *t*0$.
 
 Although the nonlinear form is harder to solve analytically, it is amenable to
 numerical solution.
@@ -40,15 +37,8 @@ numerical solution.
 The `lsoda()` function provided by the `deSolve` package can be used to
 integrate the nonlinear DE with or without without the small angle assumption.
 
-The first step is to break the second-order DE down into two first-order
-DEs,
-$$
-d\theta/dt = \phi
-$$
-and
-$$
-d\phi/dt = -\sin\theta
-$$
+The first step is to break the second-order DE down into two first-order DEs:
+*ϕ* = *d**θ*/*d**t* and *d**ϕ*/*d**t* =  − sin *θ*.
 
 ```R
 library(deSolve)
@@ -124,6 +114,6 @@ oscillator(1.999)
 
 # Exercises
 
-Further explore the behaviour in the neighborhood of $a = 2$. Are changes
+Further explore the behaviour in the neighborhood of *a=2*. Are changes
 subtle or dramatic in that region? Are there other regions of interest? Consult
 the literature if this problem interests you.
