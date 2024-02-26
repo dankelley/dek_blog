@@ -15,8 +15,8 @@ easier to use a second site.
 It does not help that new sites keep cropping up, each approaching the problem
 in a different way. The "Standards" XKCD cartoon (Reference 1) comes to mind.
 
-In this post (and in a video pointed to in Reference 4), I will explain how to
-use one particular site from NOAA (Reference 2). So far, this site has held the
+In this post (and in a video pointed to in Reference 2), I will explain how to
+use one particular site from NOAA (Reference 3). So far, this site has held the
 data I've been looking for, and its user interface has not frustrated me. That
 puts it at the top of my list. This does not mean that it will be best for you,
 but it might mean that what I have to say here might save you some time, in
@@ -30,14 +30,14 @@ that
 4. offer data free of charge, and
 5. remain relatively stable over time.
 
-The NOAA site (Reference 2) meets several of these criteria.
+The NOAA site (Reference 3) meets several of these criteria.
 
 My goal here is to make it easier for you to try this site, in case you think
 it might meet your own needs. I will do this step-by-step, with illustrations.
 
 # 1. Set the scope of your search
 
-When you visit Reference 1 and scroll to the bottom of the page, you will see
+When you visit Reference 3 and scroll to the bottom of the page, you will see
 My task is to download CTD data from R.V. Endeavor in 1988.
 view shown below.  What to do next is quite straightforward, so this site meets
 Criterion 2.  And, from the checkbox list, we have evidence that Criterion 1
@@ -137,16 +137,16 @@ click to download the data.  (This server does not seem to satisfy my criterion
 
 The link in this case led to a gzipped tar file containing a set of NetCDF
 files, one per station. If you want to analyse the data in the R language, you
-might want to take a look at a video I made topic (Reference 3) on this topic.
+might want to take a look at a video I made topic (Reference 4) on this topic.
 
 
 # References
 
 1. XKCD cartoon about expansion of standards:
    [https://xkcd.com/927/](https://xkcd.com/927/)
-2. NOAA site discussed here:
-   [https://www.ncei.noaa.gov/access/world-ocean-database-select/dbsearch.html](https://www.ncei.noaa.gov/access/world-ocean-database-select/dbsearch.html)
-3. Youtube video showing how to handle the downladed netcdf files in R
-    [https://www.youtube.com/watch?v=VWAYZGoLjmg&t=0s](https://www.youtube.com/watch?v=VWAYZGoLjmg&t=0s)
-4. Youtube video showing how to do the steps of the present blog posting:
+2. Youtube video showing how to do the steps of the present blog posting:
    [https://youtu.be/A9csPU7BWn4](https://youtu.be/A9csPU7BWn4 )
+3. NOAA site discussed here:
+   [https://www.ncei.noaa.gov/access/world-ocean-database-select/dbsearch.html](https://www.ncei.noaa.gov/access/world-ocean-database-select/dbsearch.html)
+4. Youtube video showing how to handle the downladed netcdf files in R
+    [https://www.youtube.com/watch?v=VWAYZGoLjmg&t=0s](https://www.youtube.com/watch?v=VWAYZGoLjmg&t=0s)
