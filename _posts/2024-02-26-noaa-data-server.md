@@ -35,17 +35,17 @@ The NOAA site (Reference 3) meets several of these criteria.
 My goal here is to make it easier for you to try this site, in case you think
 it might meet your own needs. I will do this step-by-step, with illustrations.
 
+My task in this example is to download CTD data from R.V. Endeavor in 1988.
+
 # 1. Set the scope of your search
 
 When you visit Reference 3 and scroll to the bottom of the page, you will see
-My task is to download CTD data from R.V. Endeavor in 1988.
-view shown below.  What to do next is quite straightforward, so this site meets
-Criterion 2.  And, from the checkbox list, we have evidence that Criterion 1
-may also be met.
+the view shown below.  What to do next is quite straightforward, so this site
+meets Criterion 2.  And, from the checkbox list, we have evidence that
+Criterion 1 may also be met.
 
-My goal in this example is to access CTD data acquired in the year 1988 by
-researchers aboard the R. V. Endeavor. The snapshot shows that it is easy to
-construct a search on these criteria, among several others.
+The snapshot shows that it is easy to construct a search based on the criteria
+of the present task, among several others.
 
 ![01.png](/dek_blog/docs/assets/images/2024-02-26-noaa-data-server-01.png)
 
