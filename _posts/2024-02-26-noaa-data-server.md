@@ -6,55 +6,56 @@ title: Downloading data from NOAA server
 
 # Introduction
 
-There are several w web sites that offer oceanographic data, and it can be
-confusing to know which is best for a given purpose.  It doesn't help that they
-are all different, so the learning process for site A doesn't help much if a
-move must be made to B or then to C, etc.  This sort of site hopping can be
-frustrating and time-consuming.
+Several web sites provide oceanographic data.  Each has pluses and minuses, so
+oceanographers can have difficulty deciding which is best-suited to a given
+purpose.  The sites differ not just in their data offerings but also in their
+user interfaces. Experience gained with one site does not necessarily make it
+easier to use a second site.
 
-New sites just keep cropping up, as one group after another decides thaat the
-existing sites are not suitable.  Frankly, the "Standards" XKCD cartoon
-(Reference 1) comes to mind quite often for oceanographic data servers.
+It does not help that new sites keep cropping up, each approaching the problem
+in a different way. The "Standards" XKCD cartoon (Reference 1) comes to mind.
 
-In this post, I will explain how to use one particular site. So far, this one
-has not frustrated me, so it's at the top of my list.  But this does not mean
-that it will be best for you.
+In this post, I will explain how to use one particular site from NOAA
+(Reference 2). So far, this site has held the data I've been looking for, and
+its user interface has not frustrated me. That puts it at the top of my list.
+This does not mean that it will be best for you, but it might mean that what I
+have to say here might save you some time, in case you want to try the site.
 
-Just how can one decide on a favourite site?  I think the first step is to make
-a list of things you want in a site.  For me, it boils down to five criteria. I
-prefer sites that
-1. offer a wide range of data (new as well as old),
+For me, the choice of data website boils down to five criteria. I prefer sites
+that
+1. offer a wide range of data, new as well as old,
 2. have an easy-to-use graphical interface,
-3. offers a way to skip that interface via URL construction,
-4. offers data free of charge, and
-5. is relatively stable over time.
+3. offer a way to skip that graphical interface by means of URL construction,
+4. offer data free of charge, and
+5. remain relatively stable over time.
 
-Recently, I had some experience with a NOAA site (Reference 2),
-which meets several of these criteria.
+The NOAA site (Reference 2) meets several of these criteria.
 
-Let me explain how to use this NOAA site, step by step.
+My goal here is to make it easier for you to try this site, in case you think
+it might meet your own needs. I will do this step-by-step, with illustrations.
 
 # 1. Set the scope of your search
 
 When you visit Reference 1 and scroll to the bottom of the page, you will see
+My task is to download CTD data from R.V. Endeavor in 1988.
 view shown below.  What to do next is quite straightforward, so this site meets
 Criterion 2.  And, from the checkbox list, we have evidence that Criterion 1
 may also be met.
 
-My goal was to access CTD data acquired in a certain time frame by a certain
-ship.  The snapshot shows that it is easy to construct a search on these
-criteria, among several others.
+My goal in this example is to access CTD data acquired in the year 1988 by
+researchers aboard the R. V. Endeavor. The snapshot shows that it is easy to
+construct a search on these criteria, among several others.
 
 ![01.png](/dek_blog/docs/assets/images/2024-02-26-noaa-data-server-01.png)
 
 # 2. Build a search query
 
-My goal is to get CTD data acquired by R.V. Endeavor in 1988.  At the top of
-the query page, shown below, I selected a range of dates.
+At the top of the query page, shown below, I selected a range of dates.
 
 ![02.png](/dek_blog/docs/assets/images/2024-02-26-noaa-data-server-02.png)
 
-Scrolling down on the page, I selected just the CTD option.
+Scrolling down on the page, I selected just the CTD option, unchecking the
+others.
 
 ![03.png](/dek_blog/docs/assets/images/2024-02-26-noaa-data-server-03.png)
 
@@ -65,29 +66,24 @@ Further down, there is a spot to specify the ship.
 If you know the ship number, you can enter it into the box numbered 2. However,
 even a given ship can have different ship numbers over its history, so it is
 best to instead click the "Go to ship" box.  When you do that, you will see a
-page that lets you search for a ship.  I want the Endeavor, as it was in 1988,
-so I selected that. Then I clicked the "Submit ship" button.
+page that lets you search for a ship.  I want the Endeavor, as it existed
+during 1988, so I selected the choice you can see here. Then I clicked the
+"Submit ship" button.
 
 ![05.png](/dek_blog/docs/assets/images/2024-02-26-noaa-data-server-05.png)
 
-With that ship selection, the website then returns to the previous page, with
-the ship code number filled in.
+At this point, the website returns to the previous page, with the ship code
+number filled in.
 
 ![06.png](/dek_blog/docs/assets/images/2024-02-26-noaa-data-server-06.png)
 
-We are getting near the end!  The next step is to click the button
-labelled "Get an inventory".  After a minute or so, we get to
-a new page.
-
-![07.png](/dek_blog/docs/assets/images/2024-02-26-noaa-data-server-07.png)
-
-
-![05.png](/dek_blog/docs/assets/images/2024-02-26-noaa-data-server-06.png)
+We are getting near the end!  The next step is to click the button labelled
+"Get an inventory".  After a minute or so, we get to a new page.
 
 # 3. Verify that the dataset is what you want
 
-After perhaps a minute, you will be on a page that either says it
-found data, or not.  In my case, it did find data.
+On this new page, it will either indicates that the site has the data you asked
+for, or not.  In my case, it did find data.
 
 The page has buttons named "VIEW DATA DISTRIBUTION PLOT" and "CRUISE LIST".  I
 didn't click either, because I want to look at the data using my own tools.  At
