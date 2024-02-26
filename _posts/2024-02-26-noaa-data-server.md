@@ -15,11 +15,12 @@ easier to use a second site.
 It does not help that new sites keep cropping up, each approaching the problem
 in a different way. The "Standards" XKCD cartoon (Reference 1) comes to mind.
 
-In this post, I will explain how to use one particular site from NOAA
-(Reference 2). So far, this site has held the data I've been looking for, and
-its user interface has not frustrated me. That puts it at the top of my list.
-This does not mean that it will be best for you, but it might mean that what I
-have to say here might save you some time, in case you want to try the site.
+In this post (and in a video pointed to in Reference 4), I will explain how to
+use one particular site from NOAA (Reference 2). So far, this site has held the
+data I've been looking for, and its user interface has not frustrated me. That
+puts it at the top of my list. This does not mean that it will be best for you,
+but it might mean that what I have to say here might save you some time, in
+case you want to try the site.
 
 For me, the choice of data website boils down to five criteria. I prefer sites
 that
@@ -138,11 +139,14 @@ The link in this case led to a gzipped tar file containing a set of NetCDF
 files, one per station. If you want to analyse the data in the R language, you
 might want to take a look at a video I made topic (Reference 3) on this topic.
 
+
 # References
 
 1. XKCD cartoon about expansion of standards:
    [https://xkcd.com/927/](https://xkcd.com/927/)
 2. NOAA site discussed here:
    [https://www.ncei.noaa.gov/access/world-ocean-database-select/dbsearch.html](https://www.ncei.noaa.gov/access/world-ocean-database-select/dbsearch.html)
-3. Youtube video showing how to handle the downloaded netcdf files in the R
-   language: [https://youtu.be/A9csPU7BWn4](https://youtu.be/A9csPU7BWn4 )
+3. Youtube video showing how to handle the downladed netcdf files in R
+    [https://www.youtube.com/watch?v=VWAYZGoLjmg&t=0s](https://www.youtube.com/watch?v=VWAYZGoLjmg&t=0s)
+4. Youtube video showing how to do the steps of the present blog posting:
+   [https://youtu.be/A9csPU7BWn4](https://youtu.be/A9csPU7BWn4 )
