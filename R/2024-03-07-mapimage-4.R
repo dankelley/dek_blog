@@ -1,7 +1,11 @@
-png("2024-03-07-mapimage-4.png", type = "cairo", antialias = "none", family = "Arial")
 library(oce)
 data(coastlineWorld)
 data(topoWorld)
+
+png("2024-03-07-mapimage-4.png",
+    type = "cairo", antialias = "none", family = "Arial",
+    unit = "in", width = 7, height = 7, res = 200
+)
 
 # Northern polar region, with color-coded bathymetry
 par(mfrow = c(1, 1), mar = c(2, 2, 1, 1))
@@ -13,11 +17,11 @@ mapPlot(coastlineWorld,
 )
 
 # Method 1: the default, using polygons for lon-lat patches
-#mapImage(topoWorld, colormap = cm)
+# mapImage(topoWorld, colormap = cm)
 # Method 2: filled contours, with ugly missing-data traces
-#mapImage(topoWorld, colormap = cm, filledContour = TRUE)
+# mapImage(topoWorld, colormap = cm, filledContour = TRUE)
 # Method 3: filled contours, with a double-sized grid cells
-#mapImage(topoWorld, colormap = cm, filledContour = 2)
+# mapImage(topoWorld, colormap = cm, filledContour = 2)
 # Method 4: filled contours, with a gap-filling gridder)
 g <- function(...) binMean2D(..., fill = TRUE, fillgap = 2)
 mapImage(topoWorld, colormap = cm, filledContour = TRUE, gridder = g)

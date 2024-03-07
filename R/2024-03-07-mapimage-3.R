@@ -1,7 +1,11 @@
-png("2024-03-07-mapimage-3.png", type = "cairo", antialias = "none", family = "Arial")
 library(oce)
 data(coastlineWorld)
 data(topoWorld)
+
+png("2024-03-07-mapimage-3.png",
+    type = "cairo", antialias = "none", family = "Arial",
+    unit = "in", width = 7, height = 7, res = 200
+)
 
 # Northern polar region, with color-coded bathymetry
 par(mfrow = c(1, 1), mar = c(2, 2, 1, 1))
