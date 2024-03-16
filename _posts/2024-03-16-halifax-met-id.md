@@ -1,3 +1,9 @@
+---
+author: Dan Kelley
+date: 2024-03-16
+title: Find Environment Canada Met station ID for Halifax
+---
+
 The dod package function `dod.met()` assumes a default ID as `6358`, for
 Halifax International Airport. I think this worked in September 2023 (or
 I’m guessing it did then, because I sometimes use such data in classes)
