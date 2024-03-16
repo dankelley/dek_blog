@@ -87,4 +87,4 @@ summarize and then plot some information contained in the file.
 **Footnotes**
 
 [1:] Gavin Simpson’s `canadaHCD` package is available at
-<https://github.com/gavinsimpson/canadaHCD>
+[https://github.com/gavinsimpson/canadaHCD](https://github.com/gavinsimpson/canadaHCD)
