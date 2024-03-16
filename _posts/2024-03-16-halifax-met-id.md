@@ -4,11 +4,11 @@ date: 2024-03-16
 title: Find Environment Canada Met station ID for Halifax
 ---
 
-The dod package function `dod.met()` assumes a default ID as `6358`, for
+The dod[^1] package function `dod.met()` assumes a default ID as `6358`, for
 Halifax International Airport. I think this worked in September 2023 (or
 I’m guessing it did then, because I sometimes use such data in classes)
 but now that does not produce any data. So I tried Gavin Simpson’s
-wonderful `canadaHCD` package[^1] to find stations with data. As shown
+wonderful `canadaHCD` package[^2] to find stations with data. As shown
 below, `6358` now has no data. I think a good default might be the
 Dockyard, `43405`.
 
@@ -92,4 +92,6 @@ summarize and then plot some information contained in the file.
 
 **Footnotes**
 
-[^1]: [https://github.com/gavinsimpson/canadaHCD](https://github.com/gavinsimpson/canadaHCD)
+[^1]: [https://github.com/dankelley/dod](https://github.com/dankelley/dod)
+
+[^2]: [https://github.com/gavinsimpson/canadaHCD](https://github.com/gavinsimpson/canadaHCD)
