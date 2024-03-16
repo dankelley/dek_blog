@@ -1,0 +1,44 @@
+---
+author: Dan Kelley
+date: 2024-03-16
+title: Find Environment Canada Met station ID for Halifax
+---
+
+The dod package function `dod.met()` assumes a default ID as `6358`, for
+Halifax International Airport.  I think this worked in September 2023 (or I'm
+guessing it did then, because I sometimes use such data in classes) but now
+that does not produce any data.  So I tried Gavin Simpson's wonderful
+`canadaHCD` package[^1] to find stations with data. As shown below, `6358` now
+has no data.  I think a good default might be the Dockyard, `43405`.
+
+```{r results="hide"}
+library("canadaHCD")
+s <- find_station("Halifax")
+d <- lapply(s$StationID, \(id) {
+    h <- hcd_hourly(id, 2024, 3)
+    sum(is.finite(h$Pressure))
+})
+```
+
+A summary is given by
+
+```{r}
+data.frame(name = s$Name, id = s$StationID, npressure = as.numeric(d))
+ID <- 43405 # Halifax Dockyard has data, but 6355 and 6456 do not
+```
+
+Now, we can use `dod::dod.met()` to get the data, and the oce package
+to summarize and then plot some information contained in the file.
+```{r}
+library(dod)
+library(oce)
+m <- dod.met(ID)
+d <- read.met(m)
+summary(d)
+plot(d)
+```
+
+**Footnotes**
+
+[^1]: Gavin Simpson's `canadaHCD` package is available at
+    [https://github.com/gavinsimpson/canadaHCD](https://github.com/gavinsimpson/canadaHCD)
