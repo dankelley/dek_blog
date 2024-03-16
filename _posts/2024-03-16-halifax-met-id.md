@@ -2,7 +2,7 @@ The dod package function `dod.met()` assumes a default ID as `6358`, for
 Halifax International Airport. I think this worked in September 2023 (or
 I’m guessing it did then, because I sometimes use such data in classes)
 but now that does not produce any data. So I tried Gavin Simpson’s
-wonderful `canadaHCD` package[1] to find stations with data. As shown
+wonderful `canadaHCD` package^[1:] to find stations with data. As shown
 below, `6358` now has no data. I think a good default might be the
 Dockyard, `43405`.
 
@@ -86,5 +86,5 @@ summarize and then plot some information contained in the file.
 
 **Footnotes**
 
-[1] Gavin Simpson’s `canadaHCD` package is available at
+[1:] Gavin Simpson’s `canadaHCD` package is available at
 <https://github.com/gavinsimpson/canadaHCD>
