@@ -1,4 +1,4 @@
-png("2024-03-22-wind-barb.png", unit = "in", width = 7, height = 5, res = 200)
+png("2024-03-22-wind-barb.png", unit = "in", width = 7, height = 5.5, res = 200)
 library(oce)
 data(coastlineWorldFine, package = "ocedata")
 par(mar = rep(2, 4))
