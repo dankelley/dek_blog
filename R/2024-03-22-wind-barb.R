@@ -39,7 +39,7 @@ P <- matrix(m$P, nrow = length(lon))
 mapContour(lon, lat, P, drawlabels = FALSE, col = 2, lwd = 1)
 lx <- seq(1, length(lon), 4)
 ly <- seq(1, length(lat), 4)
-mapDirectionFieldNEW(lon[lx], lat[ly], u[lx, ly], v[lx, ly],
+mapDirectionField(lon[lx], lat[ly], u[lx, ly], v[lx, ly],
     lwd = 1.4,
     code = "barb", scale = 2, length = 0.25
 )
