@@ -39,28 +39,32 @@ Richards, myself, and our colleague Chantelle Layton.
 
 # Steps to installing
 
-1. I visited http://www.lazyvim.org/installation and followed the
-   steps.  I named the backups as `bak-for-lazyvim` instead of just
-`*.bak` as suggested. (Note the cool way of renaming files -- I had
-not seen that before!)
+## Follow the general advice from lazyvim.org
 
-2. I installed the R language server by starting `nvim` and typing
-   `:Mason`, then typing 2 to get the LSP listing, then using the
-arrow to go down to the item called `r-languageserver` and selecting
-that.  At this point, you can edit R files but we want more!
+I visited http://www.lazyvim.org/installation and followed the steps.  I named
+the backups as `bak-for-lazyvim` instead of just `*.bak` as suggested. (Note
+the cool way of renaming files -- I had not seen that before!)
 
-3. For years, I have relied on the wonderful `R-nvim` package
-   (https://github.com/R-nvim/R.nvim) and its predecessors, written
-Jakson Alves de Aquino (www.github/jalvesaq) and colleagues, so my
-next task was to set that up. Doing this was easy.  I just edited
-`.config/nvim/lua/plugins/example.lua`, changing
+## Install the R language server
+
+I installed the R language server by starting `nvim` and typing `:Mason`, then
+typing 2 to get the LSP listing, then using the arrow to go down to the item
+called `r-languageserver` and selecting that.
+
+## Set up the R-nvim plugin
+
+For years, I have relied on the wonderful `R-nvim` package
+(https://github.com/R-nvim/R.nvim) and its predecessors, written Jakson Alves
+de Aquino (www.github/jalvesaq) and colleagues, so my next task was to set that
+up. Doing this was easy.  I just edited `.config/nvim/lua/plugins/example.lua`,
+changing
 
 ```lua
 return {
 -- add gruvbox
 ```
 
-    to read
+to read
 
 ```lua
 return {
@@ -74,9 +78,11 @@ return {
   -- add gruvbox
 ```
 
-4. On a test with an R file, I found that it was indenting with 2 spaces,
-   instead of the 4 that I use in all my work.  So, I changed
-`~/.config/nvim/init.lua` from
+## Set indentation for R
+
+On a test with an R file, I found that it was indenting with 2 spaces, instead
+of the 4 that I use in all my work.  So, I changed `~/.config/nvim/init.lua`
+from
 
 ```lua
 -- bootstrap lazy.nvim, LazyVim and your plugins
@@ -115,5 +121,4 @@ I find that very helpful.
 I still need to figure out how to make `,rf` run R code!  This is a
 pretty big one, but I'll look into that after lunch and edit this blog
 posting then.  I want to see how it previews, anyway.
-
 
