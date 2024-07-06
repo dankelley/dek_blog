@@ -58,7 +58,7 @@ return {
   -- add gruvbox
 ```
 
-to
+    to
 
 ```lua
 return {
