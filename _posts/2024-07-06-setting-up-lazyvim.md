@@ -53,10 +53,14 @@ that.  At this point, you can edit R files but we want more!
    (https://github.com/R-nvim/R.nvim) and its predecessors, written
 Jakson Alves de Aquino (www.github/jalvesaq) and colleagues, so my
 next task was to set that up. Doing this was easy.  I just edited
-`.config/nvim/lua/plugins/example.lua`, changing ```lua return { --
-add gruvbox ```
+`.config/nvim/lua/plugins/example.lua`, changing
 
-    to
+```lua
+return {
+-- add gruvbox
+```
+
+    to read
 
 ```lua
 return {
@@ -70,7 +74,9 @@ return {
   -- add gruvbox
 ```
 
-4. On a test with an R file, I found that it was indenting with 2 spaces, instead of the 4 that I use in all my work.  So, I changed `~/.config/nvim/init.lua` from
+4. On a test with an R file, I found that it was indenting with 2 spaces,
+   instead of the 4 that I use in all my work.  So, I changed
+`~/.config/nvim/init.lua` from
 
 ```lua
 -- bootstrap lazy.nvim, LazyVim and your plugins
