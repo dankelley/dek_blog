@@ -95,30 +95,32 @@ vim.o.shiftwidth = 4
 ```
 # Testing the installation
 
-I edited a few R files, and found that everything seems to be working
-fine.  I need to unlearn some keystrokes that I have in my mind from
-using lunarvim (promimently, formatting a file has changed from `SPC l
-f` to `c f`), but that won't be hard.  Some of the UI behaviours are a
-bit changed, e.g. the popup windows look different, but so far I
-really like the look and feel of lazyvim.
+I started testing by writing this blog item.  I typed in the steps as I did
+them, and would have changed the title if lazyvim had proved bothersome to
+install.  So, that's a good sign.  But I also need vim to read and work with R
+code, so that was my next text.
 
-In addition to editing some R files, verifying that a full file
-reformat did not alter the file (a requirement for me -- I don't want
-for example the oce code to change if an editor is changed).
+So, I edited a few R files.  Nothing seemed amiss.  I did find that some of the
+keystrokes I had in my head needed replacement. For example, formatting a file
+used to be `SPC l f` in my lunarvim setup, but it is `c f` in lazyvim.
+(Actually, I won't need to know that, because the default lazyvim setup will
+reformat on file saves, and I save file a *lot*.)
 
-**Note** that this setup has R commands prefixed by `\`, e.g. to start an R
-session whilst editing an R source file, type `\rf`.  I was using `,rf`
-previously, because I had set the localleader to `,`, replacing the default of
-`\`.  However, I am going to try this other format for a while, and see if I
-like it.
+It's important to me that formatting be identical to what I had before, but
+that is what I found, in editing some files in the oce project.  So, this test
+was passed without problems.
 
+There is one significant difference from my lazyvim setup, with respect to the
+local leader.  I had this set to `,`  with lunarvim, but it is (by default) set
+to `\` in lazyvim.  I will keep this for a while, and in fact I may find that I
+prefer it.  But, just to note, the command `,rf` (to launch an R session whilst
+editing R source code) is now `\rf`, and `,aa` is now `\aa` etc.  Of course, I
+can change the localleader, but I think I'll keep it for a while, since I
+prefer to use defaults unless they bother me.
 
 # Final thoughts
 
-So far, I like lazyvim.  I may end up changing the default colourscheme to what
-I had used in lunarvim, and I might change the local leader to `,` ... but, for
-now, I intend to keep both systems on my system, and I these differences help
-me to "know" which one I'm in, without thinking about it.  (The say way I
-"know" where keys are on the keyboard, without thinking about that.)
+It wasn't hard to install lazyvim, and I like using it, so far.
 
-
+Thanks, Clark, for suggesting that lunvarvim may be a problem, as its
+development seems to have slowed considerably.
