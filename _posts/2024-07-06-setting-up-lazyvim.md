@@ -56,15 +56,10 @@ called `r-languageserver` and selecting that.
 For years, I have relied on the wonderful `R-nvim` package
 (https://github.com/R-nvim/R.nvim) and its predecessors, written Jakson Alves
 de Aquino (www.github/jalvesaq) and colleagues, so my next task was to set that
-up. Doing this was easy.  I just edited `.config/nvim/lua/plugins/example.lua`,
-changing
-
-```lua
-return {
--- add gruvbox
-```
-
-to read
+up, by creating a new file called `.config/nvim/lua/plugins/myplugins.lua` with
+contents as follows.  (I suspect I'll be copying some other items from the
+`.config/nvim/lua/plugins/example.lua` file into `myplugins.lua`, as time goes
+on.)
 
 ```lua
 return {
@@ -74,8 +69,7 @@ return {
     lazy = false,
     R_assign = 2,
   },
-
-  -- add gruvbox
+}
 ```
 
 ## Set indentation for R
@@ -112,13 +106,19 @@ In addition to editing some R files, verifying that a full file
 reformat did not alter the file (a requirement for me -- I don't want
 for example the oce code to change if an editor is changed).
 
-Oh, one more thing: lazyvim showed keystroke hints only for thing
-starting with `SPC`, but lazyvim is showing hints for all keystrokes.
-I find that very helpful.
+**Note** that this setup has R commands prefixed by `\`, e.g. to start an R
+session whilst editing an R source file, type `\rf`.  I was using `,rf`
+previously, because I had set the localleader to `,`, replacing the default of
+`\`.  However, I am going to try this other format for a while, and see if I
+like it.
 
-# To do
 
-I still need to figure out how to make `,rf` run R code!  This is a
-pretty big one, but I'll look into that after lunch and edit this blog
-posting then.  I want to see how it previews, anyway.
+# Final thoughts
+
+So far, I like lazyvim.  I may end up changing the default colourscheme to what
+I had used in lunarvim, and I might change the local leader to `,` ... but, for
+now, I intend to keep both systems on my system, and I these differences help
+me to "know" which one I'm in, without thinking about it.  (The say way I
+"know" where keys are on the keyboard, without thinking about that.)
+
 
