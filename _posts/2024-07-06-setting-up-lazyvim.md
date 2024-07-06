@@ -93,6 +93,50 @@ vim.o.expandtab = true
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
 ```
+
+# Set up python
+
+Type
+
+```lua
+.LazyExtras
+```
+
+and scroll down to find `formatting.black`.  If it is not listed as
+having been already enabled, enable it by pressing `x` when the cursor
+is on that line.  This will create (or add to an existing) a
+`~/.config/nvim/lazyvim.json` file.
+
+Then type
+
+```lua
+:Mason
+```
+
+to enter Mason, and type `4` to get to linters.  Scroll down until you
+find `flake8` and type `i` to install it.
+
+Still in Mason, type 2 to get to language server protocols (LSPs).
+Find the LSP named `pyright` and install that.
+
+To test this, edit some python code and add a line like
+
+```python
+junk=3
+```
+
+and then type `SPC c f` to format it.  Spaces should appear to the
+right and left of the equals sign. Then remove the spaces again and
+type `:w` to write the file.  This ought to run the formatter again,
+so the spaces will reappear.  Once these test are done, you'll want to
+remove the line you added.
+
+Actually, I see that I have also installed the `ruff-lsp` language
+server, and a quick web search on that suggests that it does both
+formatting and linting.  Maybe there is no need for `black` and
+`pyright`?  I don't care to take the time to do tests on this, and
+things seem okay as is.
+
 # Testing the installation
 
 I started testing by writing this blog item.  I typed in the steps as I did
