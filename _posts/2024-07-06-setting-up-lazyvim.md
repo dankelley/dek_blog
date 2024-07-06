@@ -17,14 +17,14 @@ edit R files (not all, but some), I saw error messages. I tried web
 searches on those messages (in a file called `query.lua`) but got
 nowhere.
 
-Then I tried web searches for alternatives.  I ran across a youtube
-video (https://www.youtube.com/watch?v=bbHtl0Pxzj8) that I found quite
-helpful.  It scored lazyvim the highest of four tested distributions,
-but the others were nearly as high.  The deciding factor for me was
-the author: it is the Folke Lemaitre, (https://github.com/folke) who
-is a simply superstar in the neovim circles, having written the
-amazing `lazy` package plus much, much more (over 2000 commits in the
-first 6 months of the year!).
+Then I tried web searches for alternatives.  I ran across a youtube video
+[https://www.youtube.com/watch?v=bbHtl0Pxzj8](https://www.youtube.com/watch?v=bbHtl0Pxzj8)
+that I found quite helpful.  It scored lazyvim the highest of four tested
+distributions, but the others were nearly as high.  The deciding factor for me
+was the author: it is the Folke Lemaitre,
+[https://github.com/folke](https://github.com/folke) who is a simply superstar
+in the neovim circles, having written the amazing `lazy` package plus much,
+much more (over 2000 commits in the first 6 months of the year!).
 
 # Setting up lazyvim
 
