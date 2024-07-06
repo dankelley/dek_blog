@@ -57,7 +57,9 @@ next task was to set that up. Doing this was easy.  I just edited
 return {
   -- add gruvbox
 ```
+
 to
+
 ```lua
 return {
   -- add R-nvim
@@ -71,11 +73,14 @@ return {
 ```
 
 4. On a test with an R file, I found that it was indenting with 2 spaces, instead of the 4 that I use in all my work.  So, I changed `~/.config/nvim/init.lua` from
+
 ```lua
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 ```
+
 to
+
 ```lua
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
