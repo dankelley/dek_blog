@@ -124,3 +124,15 @@ It wasn't hard to install lazyvim, and I like using it, so far.
 
 Thanks, Clark, for suggesting that lunvarvim may be a problem, as its
 development seems to have slowed considerably.
+
+# Further reading and viewing
+
+ELija Manor has a great video, at
+[https://www.youtube.com/watch?v=N93cTbtLCIM](https://www.youtube.com/watch?v=N93cTbtLCIM),
+that shows the power of lazyvim.  I recommend this very highly. Quite
+a lot of material is covered quite quickly, but it's a video, so you
+can pause to take notes. Also, the presenter zooms in on the material
+so it's easy on the eyes, occasionally zooming out so you can see
+other parts of the computer display.  I don't know when I've ever seen
+a tutorial video that does this, but I *sure* wish everyone would copy
+Manor.
