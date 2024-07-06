@@ -136,3 +136,8 @@ so it's easy on the eyes, occasionally zooming out so you can see
 other parts of the computer display.  I don't know when I've ever seen
 a tutorial video that does this, but I *sure* wish everyone would copy
 Manor.
+
+In case it's helpful, I put my `~/.config/nvim` contents in a github repository
+at [https://github.com/dankelley/nvim](https://github.com/dankelley/nvim).  (I
+think it's better for folks to follow the above, though, to learn more about
+the changes that were made to the standard lazyvim setup.)
