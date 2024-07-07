@@ -75,7 +75,6 @@ vim.o.expandtab = true
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4 ```
 ```
-```
 
 This sets up the 4-space indentation that is the standard in the oce package
 [www.github.com/dankelley/oce](www.github.com/dankelley/oce), which is a major
@@ -138,23 +137,6 @@ Actually, I see that I have also installed the `ruff-lsp` language server, and
 a quick web search on that suggests that it does both formatting and linting.
 Maybe there is no need for `black` and `pyright`?  I don't care to take the
 time to do tests on this, and things seem okay as is.
-
-# Testing the installation
-
-I started testing by writing this blog item.  I typed in the steps as I did
-them, and would have changed the title if lazyvim had proved bothersome to
-install.  So, that's a good sign.  But I also need vim to read and work with R
-code, so that was my next text.
-
-So, I edited a few R files.  Nothing seemed amiss.  I did find that some of the
-keystrokes I had in my head needed replacement. For example, formatting a file
-used to be `SPC l f` in my lunarvim setup, but it is `c f` in lazyvim.
-(Actually, I won't need to know that, because the default lazyvim setup will
-reformat on file saves, and I save file a *lot*.)
-
-It's important to me that formatting be identical to what I had before, but
-that is what I found, in editing some files in the oce project.  So, this test
-was passed without problems.
 
 # Final thoughts
 
