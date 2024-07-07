@@ -92,6 +92,7 @@ vim.o.tabstop = 4
 vim.o.expandtab = true
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
+vim.g.maplocalleader = ","
 ```
 
 # Set up python
@@ -153,14 +154,6 @@ reformat on file saves, and I save file a *lot*.)
 It's important to me that formatting be identical to what I had before, but
 that is what I found, in editing some files in the oce project.  So, this test
 was passed without problems.
-
-There is one significant difference from my lazyvim setup, with respect to the
-local leader.  I had this set to `,`  with lunarvim, but it is (by default) set
-to `\` in lazyvim.  I will keep this for a while, and in fact I may find that I
-prefer it.  But, just to note, the command `,rf` (to launch an R session whilst
-editing R source code) is now `\rf`, and `,aa` is now `\aa` etc.  Of course, I
-can change the localleader, but I think I'll keep it for a while, since I
-prefer to use defaults unless they bother me.
 
 # Final thoughts
 
