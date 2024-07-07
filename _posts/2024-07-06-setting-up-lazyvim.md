@@ -138,7 +138,7 @@ does both formatting and linting. Maybe there is no need for `black` and
 
 # Further reading and viewing
 
-ELija Manor has a great video, at
+Elija Manor has a great video, at
 [https://www.youtube.com/watch?v=N93cTbtLCIM](https://www.youtube.com/watch?v=N93cTbtLCIM),
 that shows the power of lazyvim.  I recommend this very highly. Quite a lot of
 material is covered quite quickly, but it's a video, so you can pause to take
