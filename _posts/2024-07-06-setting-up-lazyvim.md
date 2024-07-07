@@ -45,8 +45,7 @@ Instal the R language server by starting `nvim` and typing
 ```
 
 Then type 2 to get the LSP listing and move the cursor down to the item called
-`r-languageserver` and install that by typing `i` whilst the cursor is on that
-line.
+`r-languageserver` and pressing the `i` key.
 
 *Step 3. set up the R-nvim plugin*
 
