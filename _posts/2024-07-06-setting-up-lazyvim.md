@@ -54,12 +54,11 @@ called `r-languageserver` and selecting that.
 ## Set up the R-nvim plugin
 
 For years, I have relied on the wonderful `R-nvim` package
-(https://github.com/R-nvim/R.nvim) and its predecessors, written Jakson Alves
-de Aquino (www.github/jalvesaq) and colleagues, so my next task was to set that
-up, by creating a new file called `.config/nvim/lua/plugins/myplugins.lua` with
-contents as follows.  (I suspect I'll be copying some other items from the
-`.config/nvim/lua/plugins/example.lua` file into `myplugins.lua`, as time goes
-on.)
+[https://github.com/R-nvim/R.nvim](https://github.com/R-nvim/R.nvim) and its
+predecessors, written Jakson Alves de Aquino
+[www.github/jalvesaq](www.github/jalvesaq) and colleagues, so my next task was
+to set that up, by creating a new file called
+`.config/nvim/lua/plugins/myplugins.lua` with contents as follows.
 
 ```lua
 return {
@@ -74,30 +73,24 @@ return {
 
 ## Set indentation for R
 
-On a test with an R file, I found that it was indenting with 2 spaces, instead
-of the 4 that I use in all my work.  So, I changed `~/.config/nvim/init.lua`
-from
+I added the following to the `~/.config/nvim/lua/config/options.lua` file.
 
 ```lua
--- bootstrap lazy.nvim, LazyVim and your plugins
-require("config.lazy")
-```
-
-to
-
-```lua
--- bootstrap lazy.nvim, LazyVim and your plugins
 vim.o.tabstop = 4
 vim.o.expandtab = true
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
-vim.g.maplocalleader = "," -- a personal choice
-require("config.lazy")
+vim.g.maplocalleader = ","
 ```
 
-Note that this overrides the default local leader, because I find it
-hard to type a character that takes a finger past where it can go if
-my other fingers are on the home keys.
+The first four lines set up 4-space indentation, which I prefer to the 2-space
+scheme provided by default.
+
+The last line the localleader to `,` because I find that easier to reach on the
+keyboard without taking my index finger from its neutral position over the `j`
+key.  This is the recommended setup for the R editing mode I use. Thus, for
+example, if I am editing an R file, I type `,rf` to launch a new window for the
+R console, and `,aa` to pass the whole source file to the R console, etc
 
 # Set up python
 
