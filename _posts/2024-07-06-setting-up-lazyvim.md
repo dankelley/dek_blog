@@ -21,10 +21,11 @@ Then I tried web searches for alternatives.  I ran across a youtube video
 [https://www.youtube.com/watch?v=bbHtl0Pxzj8](https://www.youtube.com/watch?v=bbHtl0Pxzj8)
 that I found quite helpful.  It scored lazyvim the highest of four tested
 distributions, but the others were nearly as high.  The deciding factor for me
-was the author: it is the Folke Lemaitre,
-[https://github.com/folke](https://github.com/folke) who is a simply superstar
-in the neovim circles, having written the amazing `lazy` package plus much,
-much more (over 2000 commits in the first 6 months of the year!).
+was the author: it is the Folke Lemaitre
+([https://github.com/folke](https://github.com/folke)) who is a superstar in
+the neovim circles, having written the popular `lazy` package plus many other
+important things (see e.g. the over 2000 commits in the first 6 months of the
+year so far).
 
 # Setting up lazyvim
 
