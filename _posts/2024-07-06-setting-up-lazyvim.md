@@ -1,4 +1,8 @@
---- author: Dan Kelley date: 2024-07-06 title: Setting up lazyvim ---
+---
+author: Dan Kelley
+date: 2024-07-06
+title: Setting up lazyvim
+---
 
 **Abstract.** I've been using lunarvim for a while, but learned (from my friend
 Clark Richards) that it is no longer actively maintained. So, I decided to
@@ -33,19 +37,19 @@ aforementioned Clark Richards, myself, and our colleague Chantelle Layton.
 
 # Steps to installing
 
-*Follow the general advice from lazyvim.org*
+*Step 1. follow the general advice from lazyvim.org*
 
 I visited http://www.lazyvim.org/installation and followed the steps.  I named
 the backups as `bak-for-lazyvim` instead of just `*.bak` as suggested. (Note
 the cool way of renaming files -- I had not seen that before!)
 
-*Install the R language server
+*Step 2. install the R language server*
 
 I installed the R language server by starting `nvim` and typing `:Mason`, then
 typing 2 to get the LSP listing, then using the arrow to go down to the item
 called `r-languageserver` and selecting that.
 
-*Set up the R-nvim plugin*
+*Step 3. set up the R-nvim plugin*
 
 For years, I have relied on the wonderful `R-nvim` package
 [https://github.com/R-nvim/R.nvim](https://github.com/R-nvim/R.nvim) and its
@@ -57,7 +61,7 @@ to set that up, by creating a new file called
 ```lua return { -- add R-nvim { "R-nvim/R.nvim", lazy = false, R_assign = 2, },
 } ```
 
-*Set indentation for R*
+*Step 4. set indentation for R*
 
 I added the following to the `~/.config/nvim/lua/config/options.lua` file.
 
@@ -68,7 +72,7 @@ This sets up the 4-space indentation that is the standard in the oce package
 [www.github.com/dankelley/oce](www.github.com/dankelley/oce), which is a major
 use-case for my editing.
 
-*Set the local leader to comma*
+*Step 5. set the local leader to comma*
 
 I added the following to the `~/.config/nvim/lua/config/options.lua` file to
 set the local leader to the `,` character.
@@ -86,9 +90,7 @@ R file will open a new editor window with an R console, typing `,aa` passes the
 whole source file to the R console, etesc
 
 
-
-
-*Set up python*
+*Step 6. set up python*
 
 Type
 
@@ -110,7 +112,9 @@ named `pyright` and install that.
 
 To test this, edit some python code and add a line like
 
-```python junk=3 ```
+```python
+junk=3
+```
 
 and then type `SPC c f` to format it.  Spaces should appear to the right and
 left of the equals sign. Then remove the spaces again and type `:w` to write
