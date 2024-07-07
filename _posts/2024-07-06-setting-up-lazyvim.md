@@ -87,13 +87,17 @@ to
 
 ```lua
 -- bootstrap lazy.nvim, LazyVim and your plugins
-require("config.lazy")
 vim.o.tabstop = 4
 vim.o.expandtab = true
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
-vim.g.maplocalleader = ","
+vim.g.maplocalleader = "," -- a personal choice
+require("config.lazy")
 ```
+
+Note that this overrides the default local leader, because I find it
+hard to type a character that takes a finger past where it can go if
+my other fingers are on the home keys.
 
 # Set up python
 
