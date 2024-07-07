@@ -28,35 +28,32 @@ much more (over 2000 commits in the first 6 months of the year!).
 
 # Setting up lazyvim
 
-First, please note that I may have left out some steps, so please refer to
-https://www.lazyvim.org as the preferred source of information.
-
-My main goal (for now) is to get it set up to do R coding, using the formatting
-scheme used in the oce project (www.github.com/dankelley/oce), authored by the
-aforementioned Clark Richards, myself, and our colleague Chantelle Layton.
-
-# Steps to installing
-
 *Step 1. follow the general advice from lazyvim.org*
 
-I visited http://www.lazyvim.org/installation and followed the steps.  I named
-the backups as `bak-for-lazyvim` instead of just `*.bak` as suggested. (Note
-the cool way of renaming files -- I had not seen that before!)
+Visit
+[http://www.lazyvim.org/installation](http://www.lazyvim.org/installation) and
+and follow the steps described there.  (I named the backups as
+`bak-for-lazyvim` instead of just `*.bak` as suggested, because this is not the
+first thing I tried.)
 
 *Step 2. install the R language server*
 
-I installed the R language server by starting `nvim` and typing `:Mason`, then
-typing 2 to get the LSP listing, then using the arrow to go down to the item
-called `r-languageserver` and selecting that.
+Instal the R language server by starting `nvim` and typing
+
+```lua
+:Mason
+```
+
+Then type 2 to get the LSP listing and move the cursor down to the item called
+`r-languageserver` and install that by typing `i` whilst the cursor is on that
+line.
 
 *Step 3. set up the R-nvim plugin*
 
-For years, I have relied on the wonderful `R-nvim` package
-[https://github.com/R-nvim/R.nvim](https://github.com/R-nvim/R.nvim) and its
-predecessors, written Jakson Alves de Aquino
-[www.github/jalvesaq](www.github/jalvesaq) and colleagues, so my next task was
-to set that up, by creating a new file called
-`.config/nvim/lua/plugins/myplugins.lua` with contents as follows.
+To use the wonderful `R-nvim` package
+[https://github.com/R-nvim/R.nvim](https://github.com/R-nvim/R.nvim), create a
+new file called `.config/nvim/lua/plugins/myplugins.lua` with contents as
+follows.
 
 ```lua
 return {
@@ -67,7 +64,7 @@ return {
 
 *Step 4. set indentation for R*
 
-I added the following to the `~/.config/nvim/lua/config/options.lua` file.
+Add the following to the `~/.config/nvim/lua/config/options.lua` file.
 
 ```lua
 vim.o.tabstop = 4
@@ -77,12 +74,11 @@ vim.o.shiftwidth = 4 ```
 ```
 
 This sets up the 4-space indentation that is the standard in the oce package
-[www.github.com/dankelley/oce](www.github.com/dankelley/oce), which is a major
-use-case for my editing.
+[www.github.com/dankelley/oce](www.github.com/dankelley/oce).
 
 *Step 5. set the local leader to comma*
 
-I added the following to the `~/.config/nvim/lua/config/options.lua` file to
+Add the following to the `~/.config/nvim/lua/config/options.lua` file to
 set the local leader to the `,` character.
 
 ```lua
@@ -90,12 +86,14 @@ vim.g.maplocalleader = ","
 ```
 
 
-This is recommended practice for the
-[https://github.com/R-nvim/R.nvim](https://github.com/R-nvim/R.nvim) R mode I
-use, and I prefer it anyway, because it is easier to type without my other
-fingers leaving the home keys.  With this setup, typing `,rf` whilst editing an
-R file will open a new editor window with an R console, typing `,aa` passes the
-whole source file to the R console, etesc
+This value of the local leader is recommended for
+[https://github.com/R-nvim/R.nvim](https://github.com/R-nvim/R.nvim), and it is
+quite popular in other situations, perhaps because it is much easier for
+touch-typists to strike than the default value of `\`.
+
+At this stage, it makes sense to open an existing .R file and then typing `,rf`
+to see if a console window appears.  If not, there is a problem.  If so, then
+try typing `,aa` to see if the source file is run by R.
 
 
 *Step 6. set up python*
@@ -133,17 +131,10 @@ left of the equals sign. Then remove the spaces again and type `:w` to write
 the file.  This ought to run the formatter again, so the spaces will reappear.
 Once these test are done, you'll want to remove the line you added.
 
-Actually, I see that I have also installed the `ruff-lsp` language server, and
-a quick web search on that suggests that it does both formatting and linting.
-Maybe there is no need for `black` and `pyright`?  I don't care to take the
-time to do tests on this, and things seem okay as is.
-
-# Final thoughts
-
-It wasn't hard to install lazyvim, and I like using it, so far.
-
-Thanks, Clark, for suggesting that lunvarvim may be a problem, as its
-development seems to have slowed considerably.
+(An aside: in the course of my experimentation, I also have also installed the
+`ruff-lsp` language server, and a quick web search on that suggests that it
+does both formatting and linting. Maybe there is no need for `black` and
+`pyright`?)
 
 # Further reading and viewing
 
