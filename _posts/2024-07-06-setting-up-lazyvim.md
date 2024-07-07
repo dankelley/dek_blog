@@ -58,15 +58,24 @@ predecessors, written Jakson Alves de Aquino
 to set that up, by creating a new file called
 `.config/nvim/lua/plugins/myplugins.lua` with contents as follows.
 
-```lua return { -- add R-nvim { "R-nvim/R.nvim", lazy = false, R_assign = 2, },
-} ```
+```lua
+return {
+    -- add R-nvim
+    { "R-nvim/R.nvim", lazy = false, R_assign = 2, },
+}
+```
 
 *Step 4. set indentation for R*
 
 I added the following to the `~/.config/nvim/lua/config/options.lua` file.
 
-```lua vim.o.tabstop = 4 vim.o.expandtab = true vim.o.softtabstop = 4
+```lua
+vim.o.tabstop = 4
+vim.o.expandtab = true
+vim.o.softtabstop = 4
 vim.o.shiftwidth = 4 ```
+```
+```
 
 This sets up the 4-space indentation that is the standard in the oce package
 [www.github.com/dankelley/oce](www.github.com/dankelley/oce), which is a major
@@ -94,7 +103,9 @@ whole source file to the R console, etesc
 
 Type
 
-```lua .LazyExtras ```
+```lua
+.LazyExtras
+```
 
 and scroll down to find `formatting.black`.  If it is not listed as having been
 already enabled, enable it by pressing `x` when the cursor is on that line.
@@ -102,7 +113,9 @@ This will create (or add to an existing) a `~/.config/nvim/lazyvim.json` file.
 
 Then type
 
-```lua :Mason ```
+```lua
+:Mason
+```
 
 to enter Mason, and type `4` to get to linters.  Scroll down until you find
 `flake8` and type `i` to install it.
