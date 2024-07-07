@@ -70,7 +70,7 @@ Add the following to the `~/.config/nvim/lua/config/options.lua` file.
 vim.o.tabstop = 4
 vim.o.expandtab = true
 vim.o.softtabstop = 4
-vim.o.shiftwidth = 4 ```
+vim.o.shiftwidth = 4
 ```
 
 This sets up the 4-space indentation that is the standard in the oce package
