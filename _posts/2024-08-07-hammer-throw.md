@@ -20,26 +20,26 @@ and the acceleration due to gravity being considered.  This yields governing
 equations
 
 $$
-m \frac{du}{dt} = - \rho C_D A u U
+m \frac{du}{dt} = - \frac{1}{2}\rho C_D A u U
 $$
 
 and
 
 $$
-m \frac{dw}{dt} = -mg - \rho C_D A w U
+m \frac{dw}{dt} = -mg - \frac{1}{2}\rho C_D A w U
 $$
 
 Here, $$u$$ and $$w$$ are velocity components in the horizontal directions,
 $$U$$ is the speed computed from these components, $$\rho$$ is air density
 (here taken as 1.3 kg/m$$^3$$), $$C_D$$ is drag coefficient (here taken as
-$$0.47$$, a value for a sphere), and $$g$$ is the acceleration due to gravity
-(here taken as 9.8 m/s$$^2$$). The ball properties are mass $$m$$ and plan area
-$$A$$, taken from a website describing these objects.  (Males and females use
-different balls.)
+$$0.47$$, a value commonly used for spheres; see Reference 2), and $$g$$ is the
+acceleration due to gravity (here taken as 9.8 m/s$$^2$$). The ball properties
+are mass $$m$$ and plan area $$A$$, taken from a website describing these
+objects.  (Males and females use different balls.)
 
 The initial condition was set in terms of throw speed $$U$$ and release angle
-$$\theta$$. It is assumed that the launch height is $$h_0=1.7$$m. The motion is tracked
-until vertical coordinate $$z$$ reaches 0, i.e. ground level.
+$$\theta$$. It is assumed that the launch height is $$h_0=1.7$$m. The motion is
+tracked until vertical coordinate $$z$$ reaches 0, i.e. ground level.
 
 The computations are done using the `lsoda` function in the `deSolve` R
 package. This is a well-regarded solver that automatically adjusts step size as
@@ -50,7 +50,7 @@ problems well.
 # Procedure
 
 As a base case, I will use the gold-medal results from the 2024 Olympics,
-according to Reference 2, i.e.
+according to Reference 3, i.e.
 
 * Camryn Rogers (Canada) female Gold Medal 76.97 m.
 * Ethan Katzberg (Canada) male Gold Medal 84.12 m.
@@ -67,8 +67,8 @@ of the Olympic event.  (The governing equations are nonlinear, so it is
 important to get speed in the right range.)
 
 Second, I computed the speed increase that would be required if the athletes
-used a release angle of 42$$^\circ$$, which according to Reference 1 is preferred
-by athletes.
+used a release angle of 42$$^\circ$$, which is preferred by athletes, according
+to Reference 1.
 
 # Results
 
@@ -78,7 +78,7 @@ The output from the R code, i.e.
 * female: with U = 27.520 m/s, the optimal angle of 44.03$$^\circ$$ yields distance 76.97 m
 
 indicates that the optimal angle is 44.26$$^\circ$$ for the male case and 44.03$$^\circ$$
-for the female case.  These are consistent with Reference 1.
+for the female case.  These are consistent with Reference 2.
 
 However, the speed increases required to achieve the same distances with the
 apparently preferred angle of 42$$^\circ$$ is very slight, about 4 cm/s or a 0.15
@@ -103,9 +103,12 @@ percent increase, as indicated by the following output from the R code.
    Bergamini, Giuseppe Vannozzi, and Andrea Macaluso. “Biomechanics of the
    Hammer Throw: Narrative Review.” Frontiers in Sports and Active Living 4
    (March 31, 2022): 853536. <https://doi.org/10.3389/fspor.2022.853536>.
-2. <https://olympics.com/en/paris-2024/results/athletics/men-s-hammer-throw/fnl-000100>
+2. <https://en.wikipedia.org/wiki/Drag_coefficient>
+3. <https://olympics.com/en/paris-2024/results/athletics/men-s-hammer-throw/fnl-000100>
 
-# Code
+# R code for the computation
+
+<details>
 
 ```R
 library(deSolve)
@@ -192,3 +195,4 @@ for (gender in c("male", "female")) {
     )
 }
 ```
+</details>
