@@ -8,7 +8,8 @@ title: What is the optimal angle for a hammer throw?
 
 According to Reference 1, the best angle for hammer throw is approximately
 44 deg, but athletes prefer to throw nearer 42 deg. My goal here is to see
-whether that matches what I might expect from simple physics.
+whether the former matches what I might expect from simple physics, and
+whether the latter imposes significant burden on athletes.
 
 # Procedure
 
@@ -30,10 +31,8 @@ athletes for using a sub-optimal release angle.
 
 The output from the R code, i.e.
 
-```
 * male: with U = 28.833 m/s, the optimal angle of 44.26 deg yields distance 84.12 m
 * female: with U = 27.520 m/s, the optimal angle of 44.03 deg yields distance 76.97 m
-```
 
 indicates that the optimal angle is 44.26 deg for the male case and 44.03 deg
 for the female case.  These are consistent with Reference 1.
@@ -42,17 +41,26 @@ However, the speed increases required to achieve the same distances with the
 apparently preferred angle of 42 deg is very slight, about 4 cm/s or a 0.15
 percent increase, as indicated by the following output from the R code.
 
-```
 * male: with angle = 42.00 deg, using U = 28.877 m/s yields distance-observed = 0.009 m
  NOTE: this is a speed increase of 0.044 m/s (i.e. 0.15%)
 * female: with angle = 42.00 deg, using U = 27.561 m/s yields distance-observed = 0.010 m
  NOTE: this is a speed increase of 0.041 m/s (i.e. 0.15%)
-```
+
+# Conclusions
+
+1. The suggestion, in Reference 1, of an optimal angle of approximately 44 deg
+   matches the present findings.
+2. If an angle of 42 deg is chosen instead, the release speed needs to be
+   increased by about 4 cm/s (0.15 percent), which does not seem to
+   be significant, if this shallower angle "feels" more comfortable.
 
 # References
 
- 1. <https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2022.853536/full>
- 2. <https://olympics.com/en/paris-2024/results/athletics/men-s-hammer-throw/fnl-000100>
+1. Castaldi, Gian Mario, Riccardo Borzuola, Valentina Camomilla, Elena
+   Bergamini, Giuseppe Vannozzi, and Andrea Macaluso. “Biomechanics of the
+   Hammer Throw: Narrative Review.” Frontiers in Sports and Active Living 4
+   (March 31, 2022): 853536. <https://doi.org/10.3389/fspor.2022.853536>.
+2. <https://olympics.com/en/paris-2024/results/athletics/men-s-hammer-throw/fnl-000100>
 
 # Code
 
