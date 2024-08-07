@@ -97,6 +97,10 @@ percent increase, as indicated by the following output from the R code.
    increased by about 4 cm/s (0.15 percent), which does not seem to
    be significant, if this shallower angle "feels" more comfortable.
 
+To answer the question of the title, the optimal angle is approximately
+44$$^\circ$$, but lowering this to 42$$^\circ$$, as is reportedly the custom,
+exacts a very low cost (a mere 0.15 percent increase in release velocity).
+
 # References
 
 1. Castaldi, Gian Mario, Riccardo Borzuola, Valentina Camomilla, Elena
