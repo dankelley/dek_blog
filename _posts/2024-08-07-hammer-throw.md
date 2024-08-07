@@ -145,16 +145,22 @@ throw <- function(angle, U, h0 = 1.7,
     s <- lsoda(y = y, times = times, func = func, parms)
     inair <- s[, 3] >= 0
     s <- s[inair, ]
+    maxDistance <- max(s[, 2])
     if (plot) {
-        par(mar = c(2, 2, 1, 1), mgp = c(2, 0.7, 0))
+        par(mar = c(3, 3, 1, 1), mgp = c(2, 0.7, 0))
         plot(s[, 2], s[, 3],
-            xlim = c(0, 1.1 * distance[1]),
+            xlim = c(0, 1.1 * maxDistance),
             type = "l", asp = 1,
+            lwd = 2, col = 4,
             xaxs = "i", xlab = "Distance [m]", ylab = "Height [m]"
         )
-        abline(h = 0)
+        grid()
+        usr <- par("usr")
+        abline(v = maxDistance, col = 2)
+        mtext(sprintf("%.2fm", maxDistance), side = 3, at = maxDistance, col = 2)
+        polygon(c(0, 0, usr[2], usr[2]), c(usr[3], 0, 0, usr[3]), bg = "tan", col = "tan")
     }
-    max(s[, 2])
+    maxDistance
 }
 
 # Find best angle for given speed, with the latter determined manually by
@@ -187,4 +193,6 @@ for (gender in c("male", "female")) {
         )
     )
 }
+# To see a sample trajectory, try as below (for the male record).
+throw(angle = 42, U = 28.333, m = 7.25, D = 110e-3, plot = TRUE)
 ```
