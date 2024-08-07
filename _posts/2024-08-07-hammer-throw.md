@@ -108,8 +108,6 @@ percent increase, as indicated by the following output from the R code.
 
 # R code for the computation
 
-<details>
-
 ```R
 library(deSolve)
 distance <- list("female" = 76.97, "male" = 84.12)
@@ -147,7 +145,6 @@ throw <- function(angle, U, h0 = 1.7,
     s <- lsoda(y = y, times = times, func = func, parms)
     inair <- s[, 3] >= 0
     s <- s[inair, ]
-    distance <- max(s[, 2])
     if (plot) {
         par(mar = c(2, 2, 1, 1), mgp = c(2, 0.7, 0))
         plot(s[, 2], s[, 3],
@@ -156,12 +153,8 @@ throw <- function(angle, U, h0 = 1.7,
             xaxs = "i", xlab = "Distance [m]", ylab = "Height [m]"
         )
         abline(h = 0)
-        mtext(sprintf(
-            "U=%.2f m/s, angle=%.1f deg, distance=%.2f m",
-            U, angle, distance
-        ))
     }
-    distance
+    max(s[, 2])
 }
 
 # Find best angle for given speed, with the latter determined manually by
@@ -195,4 +188,3 @@ for (gender in c("male", "female")) {
     )
 }
 ```
-</details>
