@@ -9,7 +9,7 @@ title: What is the optimal angle for a hammer throw?
 # Introduction
 
 According to Reference 1, the best angle for hammer throw is approximately
-44$^\circ$, but athletes prefer to throw nearer 42$^\circ$. My goal here is to
+44$$^\circ$$, but athletes prefer to throw nearer 42$$^\circ$$. My goal here is to
 see whether the former matches what I might expect from simple physics, and
 whether the latter imposes significant burden on athletes.
 
@@ -67,33 +67,33 @@ of the Olympic event.  (The governing equations are nonlinear, so it is
 important to get speed in the right range.)
 
 Second, I computed the speed increase that would be required if the athletes
-used a release angle of 42$^\circ$, which according to Reference 1 is preferred
+used a release angle of 42$$^\circ$$, which according to Reference 1 is preferred
 by athletes.
 
 # Results
 
 The output from the R code, i.e.
 
-* male: with U = 28.833 m/s, the optimal angle of 44.26$^\circ$ yields distance 84.12 m
-* female: with U = 27.520 m/s, the optimal angle of 44.03$^\circ$ yields distance 76.97 m
+* male: with U = 28.833 m/s, the optimal angle of 44.26$$^\circ$$ yields distance 84.12 m
+* female: with U = 27.520 m/s, the optimal angle of 44.03$$^\circ$$ yields distance 76.97 m
 
-indicates that the optimal angle is 44.26$^\circ$ for the male case and 44.03$^\circ$
+indicates that the optimal angle is 44.26$$^\circ$$ for the male case and 44.03$$^\circ$$
 for the female case.  These are consistent with Reference 1.
 
 However, the speed increases required to achieve the same distances with the
-apparently preferred angle of 42$^\circ$ is very slight, about 4 cm/s or a 0.15
+apparently preferred angle of 42$$^\circ$$ is very slight, about 4 cm/s or a 0.15
 percent increase, as indicated by the following output from the R code.
 
-* male: with angle = 42.00$^\circ$, using U = 28.877 m/s yields distance-observed = 0.009 m
+* male: with angle = 42.00$$^\circ$$, using U = 28.877 m/s yields distance-observed = 0.009 m
  NOTE: this is a speed increase of 0.044 m/s (i.e. 0.15%)
-* female: with angle = 42.00$^\circ$, using U = 27.561 m/s yields distance-observed = 0.010 m
+* female: with angle = 42.00$$^\circ$$, using U = 27.561 m/s yields distance-observed = 0.010 m
  NOTE: this is a speed increase of 0.041 m/s (i.e. 0.15%)
 
 # Conclusions
 
-1. The suggestion, in Reference 1, of an optimal angle of approximately 44$^\circ$
+1. The suggestion, in Reference 1, of an optimal angle of approximately 44$$^\circ$$
    matches the present findings.
-2. If an angle of 42$^\circ$ is chosen instead, the release speed needs to be
+2. If an angle of 42$$^\circ$$ is chosen instead, the release speed needs to be
    increased by about 4 cm/s (0.15 percent), which does not seem to
    be significant, if this shallower angle "feels" more comfortable.
 
