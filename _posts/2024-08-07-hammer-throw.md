@@ -14,24 +14,24 @@ whether the latter imposes significant burden on athletes.
 # Theory
 
 Simple Newtonian mechanics will be assumed, with governing equations
-\begin{equation}
+$$
 m \frac{du}{dt} = - \rho C_D A u U
-\end{equation}
+$$
 and
-\begin{equation}
+$$
 m \frac{dw}{dt} = -g - \rho C_D A w U
-\end{equation}
+$$
 
-Here, $u$ and $w$ are velocity components in the horizontal directions, $U$ is
-the speed computed from these components, $\rho$ is air density (here taken as
-1.3 kg/m$^3$), $C_D$ is drag coefficient (here taken as $0.47$, a value for a
-sphere), and $g$ is the acceleration due to gravity (here taken as 9.8
-m/s$^2$). The ball properties are mass $m$ and plan area $A$, taken from a
+Here, $$u$$ and $$w$$ are velocity components in the horizontal directions, $$U$$ is
+the speed computed from these components, $$\rho$$ is air density (here taken as
+1.3 kg/m$$^3$$), $$C_D$$ is drag coefficient (here taken as $$0.47$$, a value for a
+sphere), and $$g$$ is the acceleration due to gravity (here taken as 9.8
+m/s$$^2$$). The ball properties are mass $$m$$ and plan area $$A$$, taken from a
 website describing these objects.  (Males and females use different balls.)
 
-The initial condition was set in terms of throw speed $U$ and release angle
-$\theta$. It is assumed that the launch height is $h_0=1.7$m. The motion is tracked
-until vertical coordinate $z$ reaches 0, i.e. ground level.
+The initial condition was set in terms of throw speed $$U$$ and release angle
+$$\theta$$. It is assumed that the launch height is $$h_0=1.7$$m. The motion is tracked
+until vertical coordinate $$z$$ reaches 0, i.e. ground level.
 
 The computations are done using the `lsoda` function in the `deSolve` R
 package. This is a well-regarded solver that automatically adjusts step size as
