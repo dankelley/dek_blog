@@ -15,13 +15,17 @@ whether the latter imposes significant burden on athletes.
 
 # Theory
 
-Simple Newtonian mechanics will be assumed, with governing equations
+Simple Newtonian mechanics will be assumed, with forces of air friction and
+gravity being considered.  This yields governing equations
+
 $$
 m \frac{du}{dt} = - \rho C_D A u U
 $$
+
 and
+
 $$
-m \frac{dw}{dt} = -g - \rho C_D A w U
+m \frac{dw}{dt} = -mg - \rho C_D A w U
 $$
 
 Here, $$u$$ and $$w$$ are velocity components in the horizontal directions, $$U$$ is
