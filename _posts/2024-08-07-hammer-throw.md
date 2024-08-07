@@ -9,14 +9,15 @@ title: What is the optimal angle for a hammer throw?
 # Introduction
 
 According to Reference 1, the best angle for hammer throw is approximately
-44 deg, but athletes prefer to throw nearer 42 deg. My goal here is to see
-whether the former matches what I might expect from simple physics, and
+44$^\circ$, but athletes prefer to throw nearer 42$^\circ$. My goal here is to
+see whether the former matches what I might expect from simple physics, and
 whether the latter imposes significant burden on athletes.
 
 # Theory
 
-Simple Newtonian mechanics will be assumed, with forces of air friction and
-gravity being considered.  This yields governing equations
+Newtonian mechanics will be assumed, with forces of (quadratic) air friction
+and the acceleration due to gravity being considered.  This yields governing
+equations
 
 $$
 m \frac{du}{dt} = - \rho C_D A u U
@@ -28,12 +29,13 @@ $$
 m \frac{dw}{dt} = -mg - \rho C_D A w U
 $$
 
-Here, $$u$$ and $$w$$ are velocity components in the horizontal directions, $$U$$ is
-the speed computed from these components, $$\rho$$ is air density (here taken as
-1.3 kg/m$$^3$$), $$C_D$$ is drag coefficient (here taken as $$0.47$$, a value for a
-sphere), and $$g$$ is the acceleration due to gravity (here taken as 9.8
-m/s$$^2$$). The ball properties are mass $$m$$ and plan area $$A$$, taken from a
-website describing these objects.  (Males and females use different balls.)
+Here, $$u$$ and $$w$$ are velocity components in the horizontal directions,
+$$U$$ is the speed computed from these components, $$\rho$$ is air density
+(here taken as 1.3 kg/m$$^3$$), $$C_D$$ is drag coefficient (here taken as
+$$0.47$$, a value for a sphere), and $$g$$ is the acceleration due to gravity
+(here taken as 9.8 m/s$$^2$$). The ball properties are mass $$m$$ and plan area
+$$A$$, taken from a website describing these objects.  (Males and females use
+different balls.)
 
 The initial condition was set in terms of throw speed $$U$$ and release angle
 $$\theta$$. It is assumed that the launch height is $$h_0=1.7$$m. The motion is tracked
@@ -48,43 +50,50 @@ problems well.
 # Procedure
 
 As a base case, I will use the gold-medal results from the 2024 Olympics,
-according to Reference 2:
+according to Reference 2, i.e.
 
 * Camryn Rogers (Canada) female Gold Medal 76.97 m.
 * Ethan Katzberg (Canada) male Gold Medal 84.12 m.
 
-My procedure uses published characteristics of the ball (ignoring the
-connector), and an adjustment of throwing speed to get the predicted distance
-(across any angle) to agree with the results stated above.
+The work has two main steps.
 
-Once that was done, I used the estimated in-practice angle of 42 deg, to find
-the difference in throwing speed, to shed some light on the penalty paid by
-athletes for using a sub-optimal release angle.
+First, using fragments of the R code given below, I adjusted throwing speed $U$
+through a series of trials in each of which the optimal angle was found, along
+with the distance achieved.  This could have been done with optimization but I
+did it manually to explore the state space.
+
+This work provided optimal angles at a speed that ought to be similar to that
+of the Olympic event.  (The governing equations are nonlinear, so it is
+important to get speed in the right range.)
+
+Second, I computed the speed increase that would be required if the athletes
+used a release angle of 42$^\circ$, which according to Reference 1 is preferred
+by athletes.
 
 # Results
 
 The output from the R code, i.e.
 
-* male: with U = 28.833 m/s, the optimal angle of 44.26 deg yields distance 84.12 m
-* female: with U = 27.520 m/s, the optimal angle of 44.03 deg yields distance 76.97 m
+* male: with U = 28.833 m/s, the optimal angle of 44.26$^\circ$ yields distance 84.12 m
+* female: with U = 27.520 m/s, the optimal angle of 44.03$^\circ$ yields distance 76.97 m
 
-indicates that the optimal angle is 44.26 deg for the male case and 44.03 deg
+indicates that the optimal angle is 44.26$^\circ$ for the male case and 44.03$^\circ$
 for the female case.  These are consistent with Reference 1.
 
 However, the speed increases required to achieve the same distances with the
-apparently preferred angle of 42 deg is very slight, about 4 cm/s or a 0.15
+apparently preferred angle of 42$^\circ$ is very slight, about 4 cm/s or a 0.15
 percent increase, as indicated by the following output from the R code.
 
-* male: with angle = 42.00 deg, using U = 28.877 m/s yields distance-observed = 0.009 m
+* male: with angle = 42.00$^\circ$, using U = 28.877 m/s yields distance-observed = 0.009 m
  NOTE: this is a speed increase of 0.044 m/s (i.e. 0.15%)
-* female: with angle = 42.00 deg, using U = 27.561 m/s yields distance-observed = 0.010 m
+* female: with angle = 42.00$^\circ$, using U = 27.561 m/s yields distance-observed = 0.010 m
  NOTE: this is a speed increase of 0.041 m/s (i.e. 0.15%)
 
 # Conclusions
 
-1. The suggestion, in Reference 1, of an optimal angle of approximately 44 deg
+1. The suggestion, in Reference 1, of an optimal angle of approximately 44$^\circ$
    matches the present findings.
-2. If an angle of 42 deg is chosen instead, the release speed needs to be
+2. If an angle of 42$^\circ$ is chosen instead, the release speed needs to be
    increased by about 4 cm/s (0.15 percent), which does not seem to
    be significant, if this shallower angle "feels" more comfortable.
 
