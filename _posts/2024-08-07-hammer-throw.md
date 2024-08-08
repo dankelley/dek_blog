@@ -91,6 +91,10 @@ percent increase, as indicated by the following output from the R code.
 * female: with angle = 42.00$$^\circ$$, using U = 27.561 m/s yields distance-observed = 0.010 m
  NOTE: this is a speed increase of 0.041 m/s (i.e. 0.15%)
 
+Below is a sample simulation (created in the last few lines of the R code shown at the end of this blog posting).
+
+![Sample trajectory (simulating men's 2024 Olympic trhow).](/dek_blog/docs/assets/images/2024-08-07-hammer-throw.png)
+
 # Conclusions
 
 1. The suggestion, in Reference 1, of an optimal angle of approximately 44$$^\circ$$
@@ -153,7 +157,6 @@ throw <- function(angle, U, h0 = 1.7, m = 4, D = 85e-3, plot = FALSE) {
             xaxs = "i", xlab = "Distance [m]", ylab = "Height [m]"
         )
         grid()
-        usr <- par("usr")
         abline(h = 0)
         text(maxDistance, 0, labels = sprintf("%.2fm", maxDistance), pos = 1)
         mtext(sprintf("m=%.2fkg, D=%.2fm with U=%.2fm/s, angle=%.2f deg, h0=%.1fm", m, D, U, angle, h0))
@@ -192,6 +195,8 @@ for (gender in c("male", "female")) {
         )
     )
 }
-# To see a sample trajectory, try as below (for the male record).
+# Draw a sample illustration of a trajectory (the male test case).
+png("2024-08-07-hammer-throw.png", unit = "in", width = 7, height = 3, res = 200)
 throw(angle = 42, U = 28.333, m = 7.26, D = 110e-3, plot = TRUE)
+dev.off()
 ```
