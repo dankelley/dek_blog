@@ -33,9 +33,11 @@ Here, $$u$$ and $$w$$ are velocity components in the horizontal directions,
 $$U$$ is the speed computed from these components, $$\rho$$ is air density
 (here taken as 1.3 kg/m$$^3$$), $$C_D$$ is drag coefficient (here taken as
 $$0.47$$, a value commonly used for spheres; see Reference 2), and $$g$$ is the
-acceleration due to gravity (here taken as 9.8 m/s$$^2$$). The ball properties
-are mass $$m$$ and plan area $$A$$, taken from a website describing these
-objects.  (Males and females use different balls.)
+acceleration due to gravity (here taken as 9.8 m/s$$^2$$).
+
+The ball properties are mass $$m$$ (7.26kg for males and 4kg for females) and
+plan area $$\pi R^2$$ (with $$2R$$ being 0.110m for males and 0.085m for
+females).
 
 The initial condition was set in terms of throw speed $$U$$ and release angle
 $$\theta$$. It is assumed that the launch height is $$h_0=1.7$$m. The motion is
@@ -74,7 +76,7 @@ to Reference 1.
 
 The output from the R code, i.e.
 
-* male: with U = 28.833 m/s, the optimal angle of 44.26$$^\circ$$ yields distance 84.12 m
+* male: with U = 28.801 m/s, the optimal angle of 44.19$$^\circ$$ yields distance 84.12 m
 * female: with U = 27.520 m/s, the optimal angle of 44.03$$^\circ$$ yields distance 76.97 m
 
 indicates that the optimal angle is 44.26$$^\circ$$ for the male case and 44.03$$^\circ$$
@@ -84,7 +86,7 @@ However, the speed increases required to achieve the same distances with the
 apparently preferred angle of 42$$^\circ$$ is very slight, about 4 cm/s or a 0.15
 percent increase, as indicated by the following output from the R code.
 
-* male: with angle = 42.00$$^\circ$$, using U = 28.877 m/s yields distance-observed = 0.009 m
+* male: with angle = 42.00$$^\circ$$, using U = 28.845 m/s yields distance-observed = 0.010 m
  NOTE: this is a speed increase of 0.044 m/s (i.e. 0.15%)
 * female: with angle = 42.00$$^\circ$$, using U = 27.561 m/s yields distance-observed = 0.010 m
  NOTE: this is a speed increase of 0.041 m/s (i.e. 0.15%)
@@ -114,31 +116,23 @@ exacts a very low cost (a mere 0.15 percent increase in release velocity).
 
 ```R
 library(deSolve)
-distance <- list("female" = 76.97, "male" = 84.12)
-func <- function(t, y, parms) {
-    A <- parms$A
-    m <- parms$m
-    CD <- parms$CD
-    rho <- parms$rho
-    g <- parms$g
-    u <- y[3]
-    w <- y[4]
-    U <- sqrt(u^2 + w^2)
-    dxdt <- u
-    dzdt <- w
-    dudt <- -0.5 * rho * CD * u * U * A / m
-    dwdt <- -0.5 * rho * CD * w * U * A / m - g
-    res <- c(dxdt, dzdt, dudt, dwdt)
-    list(res)
-}
-throw <- function(angle, U, h0 = 1.7,
-                  m = 4, # 4kg women, 7.25 kg men
-                  D = 85e-3, # 85mm women, 110mm men
-                  gender = "female",
-                  plot = FALSE) {
-    m <- list(female = 4, male = 7.25)[[gender]]
-    D <- list(female = 85e-3, male = 110e-3)[[gender]]
-
+throw <- function(angle, U, h0 = 1.7, m = 4, D = 85e-3, plot = FALSE) {
+    func <- function(t, y, parms) {
+        A <- parms$A
+        m <- parms$m
+        CD <- parms$CD
+        rho <- parms$rho
+        g <- parms$g
+        u <- y[3]
+        w <- y[4]
+        U <- sqrt(u^2 + w^2)
+        dxdt <- u
+        dzdt <- w
+        dudt <- -0.5 * rho * CD * u * U * A / m
+        dwdt <- -0.5 * rho * CD * w * U * A / m - g
+        res <- c(dxdt, dzdt, dudt, dwdt)
+        list(res)
+    }
     times <- seq(0, 5, length.out = 5000)
     theta <- angle * pi / 180
     u <- U * cos(theta)
@@ -160,9 +154,9 @@ throw <- function(angle, U, h0 = 1.7,
         )
         grid()
         usr <- par("usr")
-        abline(v = maxDistance, col = 2)
-        mtext(sprintf("%.2fm", maxDistance), side = 3, at = maxDistance, col = 2)
-        polygon(c(0, 0, usr[2], usr[2]), c(usr[3], 0, 0, usr[3]), bg = "tan", col = "tan")
+        abline(h = 0)
+        text(maxDistance, 0, labels = sprintf("%.2fm", maxDistance), pos = 1)
+        mtext(sprintf("m=%.2fkg, D=%.2fm with U=%.2fm/s, angle=%.2f deg, h0=%.1fm", m, D, U, angle, h0))
     }
     maxDistance
 }
@@ -170,9 +164,10 @@ throw <- function(angle, U, h0 = 1.7,
 # Find best angle for given speed, with the latter determined manually by
 # running throw() with a series of U values, adjusting until the maximal
 # distance matched the Olympic results to the published accuracy.
+distance <- list(female = 76.97, male = 84.12)
 for (gender in c("male", "female")) {
-    U <- list(female = 27.52, male = 28.833)[[gender]]
-    m <- list(female = 4, male = 7.25)[[gender]]
+    U <- list(female = 27.52, male = 28.801)[[gender]]
+    m <- list(female = 4, male = 7.26)[[gender]]
     D <- list(female = 85e-3, male = 110e-3)[[gender]]
     o <- optimize(\(angle) throw(angle, U, m = m, D = D), c(20, 60), maximum = TRUE)
     cat(sprintf(
@@ -198,5 +193,5 @@ for (gender in c("male", "female")) {
     )
 }
 # To see a sample trajectory, try as below (for the male record).
-throw(angle = 42, U = 28.333, m = 7.25, D = 110e-3, plot = TRUE)
+throw(angle = 42, U = 28.333, m = 7.26, D = 110e-3, plot = TRUE)
 ```
